@@ -9,14 +9,32 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    busstopsearch.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    routeconstruction.cpp \
+    routeinformation.cpp \
+    routesearch.cpp \
+    stopinformation.cpp \
+    trafficrules.cpp
 
 HEADERS += \
-    mainwindow.h
+    busstopsearch.h \
+    mainwindow.h \
+    routeconstruction.h \
+    routeinformation.h \
+    routesearch.h \
+    stopinformation.h \
+    trafficrules.h
 
 FORMS += \
-    mainwindow.ui
+    busstopsearch.ui \
+    mainwindow.ui \
+    routeconstruction.ui \
+    routeinformation.ui \
+    routesearch.ui \
+    stopinformation.ui \
+    trafficrules.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
