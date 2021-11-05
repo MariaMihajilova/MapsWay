@@ -12,6 +12,7 @@ SOURCES += \
     busstopsearch.cpp \
     main.cpp \
     mainwindow.cpp \
+    mapwidget.cpp \
     routeconstruction.cpp \
     routeinformation.cpp \
     routesearch.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 HEADERS += \
     busstopsearch.h \
     mainwindow.h \
+    mapwidget.h \
     routeconstruction.h \
     routeinformation.h \
     routesearch.h \
