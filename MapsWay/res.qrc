@@ -4,4 +4,7 @@
         <file>img/icon.ico</file>
         <file>img/Logo.png</file>
     </qresource>
+    <qresource prefix="/design">
+        <file>css/style.css</file>
+    </qresource>
 </RCC>
