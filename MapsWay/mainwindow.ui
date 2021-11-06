@@ -25,8 +25,23 @@
     <height>600</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Карта</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/img/img/icon.ico</normaloff>:/img/img/icon.ico</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="MapWidget" name="map">
@@ -37,6 +52,9 @@
       <width>887</width>
       <height>912</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;Times New Roman&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -55,7 +73,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

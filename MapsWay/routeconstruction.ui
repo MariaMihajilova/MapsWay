@@ -60,7 +60,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Точка відправки</string>
+    <string>Точка прибуття</string>
    </property>
   </widget>
   <widget class="QComboBox" name="comboBox">
