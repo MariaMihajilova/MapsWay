@@ -10,5 +10,25 @@
     <qresource prefix="/data">
         <file>logs/Error.txt</file>
         <file>data/json/routes.json</file>
+        <file>data/csv/Alexander_Polyak_Square.csv</file>
+        <file>data/csv/AvtoZAZ.csv</file>
+        <file>data/csv/Bazarna_Street.csv</file>
+        <file>data/csv/Bus_Station.csv</file>
+        <file>data/csv/Festivalnaya_Square.csv</file>
+        <file>data/csv/Gagarin_Street.csv</file>
+        <file>data/csv/Glinka_Concert_Hall.csv</file>
+        <file>data/csv/Magara_Theater.csv</file>
+        <file>data/csv/Metallurgists_Avenue.csv</file>
+        <file>data/csv/Mira_Street.csv</file>
+        <file>data/csv/Pushkin_Square.csv</file>
+        <file>data/csv/Railway_Station_Zaporozhye-1.csv</file>
+        <file>data/csv/Regional_Library.csv</file>
+        <file>data/csv/Shevchenko_Boulevard.csv</file>
+        <file>data/csv/Shopping_Mall_Ukraine.csv</file>
+        <file>data/csv/Steelworkers_Street.csv</file>
+        <file>data/csv/University_Square.csv</file>
+        <file>data/csv/Zaporizhia_Square.csv</file>
+        <file>data/csv/Zaporizhzhya_Sich_Newspaper_Editorial_Office.csv</file>
+        <file>data/txt/Stops_List.txt</file>
     </qresource>
 </RCC>
