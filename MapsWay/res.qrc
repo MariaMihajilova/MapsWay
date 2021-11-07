@@ -9,5 +9,6 @@
     </qresource>
     <qresource prefix="/data">
         <file>logs/Error.txt</file>
+        <file>data/json/routes.json</file>
     </qresource>
 </RCC>
