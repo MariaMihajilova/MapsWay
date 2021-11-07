@@ -1,0 +1,29 @@
+{
+    "routes": [
+        {
+            "type": "Bus",
+            "numer": "17",
+            "count": 8
+        },
+        {
+            "type": "Bus",
+            "numer": "18",
+            "count": 8
+        },
+        {
+            "type": "Bus",
+            "numer": "72",
+            "count": 8
+        },
+        {
+            "type": "Trolleybus",
+            "numer": "1",
+            "count": 8
+        },
+        {
+            "type": "RouteTaxi",
+            "numer": "40",
+            "count": 8
+        }
+    ]
+}
