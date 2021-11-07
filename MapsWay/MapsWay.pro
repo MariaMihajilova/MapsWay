@@ -10,6 +10,8 @@ CONFIG += c++11
 
 SOURCES += \
     busstopsearch.cpp \
+    exception.cpp \
+    file.cpp \
     main.cpp \
     mainwindow.cpp \
     mapwidget.cpp \
@@ -21,6 +23,8 @@ SOURCES += \
 
 HEADERS += \
     busstopsearch.h \
+    exception.h \
+    file.h \
     mainwindow.h \
     mapwidget.h \
     routeconstruction.h \
