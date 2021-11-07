@@ -1,22 +1,26 @@
 #ifndef MAPWIDGET_H
 #define MAPWIDGET_H
 
+#include "mainwindow.h"
+
 #include <QLabel>
 #include <QWidget>
+#include <QMainWindow>
 
 class MapWidget : public QLabel
 {
-    Q_OBJECT;
 
-    public:
-        MapWidget(QWidget* parent = nullptr);
+Q_OBJECT;
 
-    private:
-        QRect startRect;    // Збереження початкового позміру
+public:
+    MapWidget(QWidget* parent = nullptr);
 
-    private slots:
-        void on_scaleChanged(float scale);          // Мтод зміни розміру
-        void move(QPoint vec, QRect windowRect);    // Метод переміщення на заданий вектор
+private:
+    QRect startRect;
+
+private slots:
+    void on_scaleChanged(float scale);
+    void move(QPoint vec, QRect windowRect);
 };
 
 #endif // MAPWIDGET_H

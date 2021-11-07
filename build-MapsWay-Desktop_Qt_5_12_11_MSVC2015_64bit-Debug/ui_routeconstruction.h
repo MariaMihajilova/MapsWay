@@ -65,7 +65,7 @@ public:
     {
         RouteConstruction->setWindowTitle(QApplication::translate("RouteConstruction", "\320\221\321\203\320\264\321\203\320\262\320\260\320\275\320\275\321\217 \320\274\320\260\321\200\321\210\321\200\321\203\321\202\321\203 ", nullptr));
         label->setText(QApplication::translate("RouteConstruction", "\320\242\320\276\321\207\320\272\320\260 \320\262\321\226\320\264\320\277\321\200\320\260\320\262\320\272\320\270", nullptr));
-        label_2->setText(QApplication::translate("RouteConstruction", "\320\242\320\276\321\207\320\272\320\260 \320\262\321\226\320\264\320\277\321\200\320\260\320\262\320\272\320\270", nullptr));
+        label_2->setText(QApplication::translate("RouteConstruction", "\320\242\320\276\321\207\320\272\320\260 \320\277\321\200\320\270\320\261\321\203\321\202\321\202\321\217", nullptr));
         pushButton->setText(QApplication::translate("RouteConstruction", "\320\237\320\276\320\261\321\203\320\264\321\203\320\262\320\260\321\202\320\270", nullptr));
     } // retranslateUi
 

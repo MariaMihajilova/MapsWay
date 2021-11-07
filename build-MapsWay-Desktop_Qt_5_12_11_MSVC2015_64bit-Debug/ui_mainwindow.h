@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
@@ -43,6 +44,13 @@ public:
         MainWindow->resize(800, 600);
         MainWindow->setMinimumSize(QSize(800, 600));
         MainWindow->setMaximumSize(QSize(800, 600));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Times New Roman"));
+        MainWindow->setFont(font);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/img/img/icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
+        MainWindow->setIconSize(QSize(30, 30));
         action = new QAction(MainWindow);
         action->setObjectName(QString::fromUtf8("action"));
         action_2 = new QAction(MainWindow);
@@ -58,12 +66,13 @@ public:
         map = new MapWidget(centralwidget);
         map->setObjectName(QString::fromUtf8("map"));
         map->setGeometry(QRect(0, 0, 887, 912));
+        map->setStyleSheet(QString::fromUtf8("font: 8pt \"Times New Roman\";"));
         map->setPixmap(QPixmap(QString::fromUtf8(":/img/img/Maps_1.png")));
         map->setScaledContents(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 20));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         MainWindow->setMenuBar(menubar);

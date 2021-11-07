@@ -15,10 +15,12 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mapwidget.cpp \
+    markerwidget.cpp \
     routeconstruction.cpp \
     routeinformation.cpp \
     routesearch.cpp \
     stopinformation.cpp \
+    stopmarker.cpp \
     trafficrules.cpp
 
 HEADERS += \
@@ -27,10 +29,12 @@ HEADERS += \
     file.h \
     mainwindow.h \
     mapwidget.h \
+    markerwidget.h \
     routeconstruction.h \
     routeinformation.h \
     routesearch.h \
     stopinformation.h \
+    stopmarker.h \
     trafficrules.h
 
 FORMS += \
