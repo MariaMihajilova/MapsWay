@@ -15,7 +15,7 @@ Exception::Exception(QString key)
     messageBox.critical(0,"Error №" + key, value +" !");
 
     // Запись сообщения в отчет об ошибках
-    QFile file(":/new/prefix1/Error.txt");
+    QFile file(":/data/logs/Error.txt");
     try{
         if (!file.open(QIODevice::WriteOnly)) { // Якщо не вышло коректно открыть файл
             throw "0";                          // Вызовем сообщение
