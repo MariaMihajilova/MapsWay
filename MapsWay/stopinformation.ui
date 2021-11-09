@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>462</width>
-    <height>362</height>
+    <width>698</width>
+    <height>365</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>462</width>
-    <height>362</height>
+    <width>698</width>
+    <height>365</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>462</width>
-    <height>362</height>
+    <width>698</width>
+    <height>365</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
     <rect>
      <x>20</x>
      <y>100</y>
-     <width>121</width>
+     <width>131</width>
      <height>21</height>
     </rect>
    </property>
@@ -63,20 +63,14 @@
     <string>TextLabel</string>
    </property>
   </widget>
-  <widget class="QListView" name="listView">
+  <widget class="QTableView" name="tableView">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>200</x>
      <y>20</y>
-     <width>256</width>
+     <width>451</width>
      <height>321</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Times New Roman</family>
-     <pointsize>12</pointsize>
-    </font>
    </property>
   </widget>
  </widget>

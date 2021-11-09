@@ -12,8 +12,9 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
@@ -22,15 +23,15 @@ class Ui_StopInformation
 public:
     QLabel *label;
     QLabel *label_2;
-    QListView *listView;
+    QTableView *tableView;
 
     void setupUi(QDialog *StopInformation)
     {
         if (StopInformation->objectName().isEmpty())
             StopInformation->setObjectName(QString::fromUtf8("StopInformation"));
-        StopInformation->resize(462, 362);
-        StopInformation->setMinimumSize(QSize(462, 362));
-        StopInformation->setMaximumSize(QSize(462, 362));
+        StopInformation->resize(698, 365);
+        StopInformation->setMinimumSize(QSize(698, 365));
+        StopInformation->setMaximumSize(QSize(698, 365));
         label = new QLabel(StopInformation);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 100, 121, 21));
@@ -42,13 +43,9 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(40, 140, 81, 41));
         label_2->setFont(font);
-        listView = new QListView(StopInformation);
-        listView->setObjectName(QString::fromUtf8("listView"));
-        listView->setGeometry(QRect(180, 20, 256, 321));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Times New Roman"));
-        font1.setPointSize(12);
-        listView->setFont(font1);
+        tableView = new QTableView(StopInformation);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+        tableView->setGeometry(QRect(200, 20, 451, 321));
 
         retranslateUi(StopInformation);
 
