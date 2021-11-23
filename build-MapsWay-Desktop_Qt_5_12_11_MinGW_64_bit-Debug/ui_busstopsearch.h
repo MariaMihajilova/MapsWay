@@ -34,7 +34,7 @@ public:
         BusStopSearch->setMaximumSize(QSize(400, 300));
         label = new QLabel(BusStopSearch);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(130, 50, 121, 31));
+        label->setGeometry(QRect(130, 50, 131, 31));
         QFont font;
         font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(14);
@@ -45,7 +45,7 @@ public:
         pushButton->setFont(font);
         comboBox = new QComboBox(BusStopSearch);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(90, 100, 191, 21));
+        comboBox->setGeometry(QRect(100, 100, 191, 21));
         comboBox->setFont(font);
 
         retranslateUi(BusStopSearch);

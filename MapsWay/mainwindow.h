@@ -25,6 +25,11 @@ signals:
     void scaleChanged(float scale);                      // Сигнал зміни розміру інтерфейса
     void moveSignal (QPoint vec, QRect windowRect);      // Сигнал зміни позиції інтерфейсу
     void moveSignal (QPoint vec);                        // Сигнал зміни позиції інтерфейсу для міток
+    void initialization ();
+    void offset (QPoint offset);
+
+    void newPath(int start, int end);
+    void pathVisible(bool visible);
 
 private slots:
     void on_action_triggered();

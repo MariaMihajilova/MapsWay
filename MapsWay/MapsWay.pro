@@ -16,12 +16,16 @@ SOURCES += \
     mainwindow.cpp \
     mapwidget.cpp \
     markerwidget.cpp \
+    pathbuilder.cpp \
+    route.cpp \
     routeconstruction.cpp \
     routeinformation.cpp \
     routesearch.cpp \
+    routetaxi.cpp \
     stopinformation.cpp \
     stopmarker.cpp \
-    trafficrules.cpp
+    trafficrules.cpp \
+    transportmarker.cpp
 
 HEADERS += \
     busstopsearch.h \
@@ -30,12 +34,16 @@ HEADERS += \
     mainwindow.h \
     mapwidget.h \
     markerwidget.h \
+    pathbuilder.h \
+    route.h \
     routeconstruction.h \
     routeinformation.h \
     routesearch.h \
+    routetaxi.h \
     stopinformation.h \
     stopmarker.h \
-    trafficrules.h
+    trafficrules.h \
+    transportmarker.h
 
 FORMS += \
     busstopsearch.ui \

@@ -12,34 +12,29 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_RouteInformation
 {
 public:
-    QListView *listView;
-    QListView *listView_2;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
     QLabel *label_5;
     QLabel *label_6;
+    QTableView *tableView;
+    QTableView *tableView_2;
 
     void setupUi(QDialog *RouteInformation)
     {
         if (RouteInformation->objectName().isEmpty())
             RouteInformation->setObjectName(QString::fromUtf8("RouteInformation"));
         RouteInformation->resize(911, 300);
-        listView = new QListView(RouteInformation);
-        listView->setObjectName(QString::fromUtf8("listView"));
-        listView->setGeometry(QRect(300, 60, 256, 192));
-        listView_2 = new QListView(RouteInformation);
-        listView_2->setObjectName(QString::fromUtf8("listView_2"));
-        listView_2->setGeometry(QRect(630, 60, 256, 192));
         label = new QLabel(RouteInformation);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(40, 190, 91, 21));
@@ -65,8 +60,14 @@ public:
         label_5->setFont(font);
         label_6 = new QLabel(RouteInformation);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(710, 20, 81, 31));
+        label_6->setGeometry(QRect(680, 20, 81, 31));
         label_6->setFont(font);
+        tableView = new QTableView(RouteInformation);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+        tableView->setGeometry(QRect(310, 60, 211, 192));
+        tableView_2 = new QTableView(RouteInformation);
+        tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
+        tableView_2->setGeometry(QRect(590, 60, 256, 192));
 
         retranslateUi(RouteInformation);
 

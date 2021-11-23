@@ -19,7 +19,6 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 #include <mapwidget.h>
-#include "stopmarker.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -33,7 +32,6 @@ public:
     QAction *action_5;
     QWidget *centralwidget;
     MapWidget *map;
-    StopMarker *label;
     QMenuBar *menubar;
     QMenu *menu;
     QStatusBar *statusBar;
@@ -71,9 +69,6 @@ public:
         map->setStyleSheet(QString::fromUtf8("font: 8pt \"Times New Roman\";"));
         map->setPixmap(QPixmap(QString::fromUtf8(":/img/img/Maps_1.png")));
         map->setScaledContents(true);
-        label = new StopMarker(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(380, 260, 47, 13));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -110,7 +105,6 @@ public:
 "", nullptr));
         action_5->setText(QApplication::translate("MainWindow", "\320\240\320\276\320\267\321\200\320\260\321\205\321\203\320\262\320\260\321\202\320\270 \321\202\321\200\320\260\321\204\321\226\320\272", nullptr));
         map->setText(QString());
-        label->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         menu->setTitle(QApplication::translate("MainWindow", "\320\234\320\265\320\275\321\216", nullptr));
     } // retranslateUi
 

@@ -12,12 +12,11 @@ public:
 
 private slots:
     void on_scaleChanged(float scale);
+    void init();
     void move(QPoint vec);
 
-private:
+protected:
     QPoint startPoint;
-
-    float scale;
 };
 
 #endif // MARKERWIDGET_H
