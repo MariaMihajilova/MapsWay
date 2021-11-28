@@ -1,17 +1,18 @@
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
 
-// Класс для хранения кода ошибки и её сообщения
+// Клас для зберігання коду помилки та її повідомлення
 #include "QMap"
-// Класы для оповещения о ошибках
+// Класи для оповіщення про помилки
 #include "QFile"
 #include "QMessageBox"
 
-// Объявление класса
+// Оголошення класу
 class Exception
 {
 public:
-    Exception(QString code);   //Конструктор принимающий код ошибки
+    Exception(QString code);   // Конструктор приймає код помилки
+                               // та викликає й записує повідомлення про помилу
 };
 
 #endif // EXCEPTION_H

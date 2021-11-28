@@ -2,30 +2,30 @@
 
 Exception::Exception(QString key)
 {
-    // Загрузим список ошибок
+    // Завантажимо список помилок
     QMap<QString,QString> map;
     map["1"] = "File not exists";
 
-    // Определение текста сповіщення
+    // Визначення тексту сповіщення
     QString value = map.value(key);
     QString data = ("Error: " + key +  " " + value);
 
-    // Графическое уведомление пользователя об ошибке
+    // Графічне повідомлення користувача про помилку
     QMessageBox messageBox;
     messageBox.critical(0,"Error №" + key, value +" !");
 
-    // Запись сообщения в отчет об ошибках
+    // Запис повідомлення до звіту про помилки
     QFile file(":/data/logs/Error.txt");
     try{
-        if (!file.open(QIODevice::WriteOnly)) { // Якщо не вышло коректно открыть файл
-            throw "0";                          // Вызовем сообщение
+        if (!file.open(QIODevice::WriteOnly)) { // Якщо не вийшло правильно відкрити файл
+            throw "0";                          // Викличемо повідомлення
         }
         else {
-            file.write(data.toUtf8());          // Запишем сообщение
-            file.close();                       // Закроем файл
+            file.write(data.toUtf8());          // Запишемо повідомлення
+            file.close();                       // Закриємо файл
         }
     }
-    catch(QString ErrorCode) {                  // Сообщение об ошибке
+    catch(QString ErrorCode) {                  // Повідомлення про помилку
           messageBox.critical(0,"Error №" + ErrorCode,"Crash report file not found !");
     }
 }

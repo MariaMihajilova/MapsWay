@@ -1,41 +1,48 @@
 #ifndef FILE_H
 #define FILE_H
 
-// Библиотека с классом исключений
+// Бібліотеки з класом винятків
 #include <exception.h>
 
-// Библиотеки нужные для чтения всех файла
+// Бібліотеки потрібні для зчитування всіх файлів
 #include <QString>
 #include <QFile>
 
-// Библиотеки нужные для чтения CSV файлов
+// Бібліотеки потрібні для зчитування CSV файлів
 #include <QStandardItemModel>
 #include <QTextStream>
 
-// Библиотеки нужные для чтения Json файла
+// Бібліотеки потрібні для зчитування Json файлу
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
 
-// Структура нужная для чтения Json файла
-// Содержит информацию о маршруте
+// Структура потрібна для зчитування Json файлу
+// Містить інформацію про маршрут
 struct route {
-    QString type;   // Тип транспорта на маршруте
+    int count;      // Кількість машин на маршруті
     QString numer;  // Номер маршрута
-    int count;      // Количество машин на маршруте
+    QString type;   // Тип транспорта на маршруте
+    int startTime;  // Час початку руху (у хвилинах)
+    int endTime;    // Час кінця руху
+    int delay;      // Час простою на зупинці
+    int firstStop;  // id першої зупинки
+    int endStop;    // id останньої зупинки
 };
 
-// Объявление класса
+// Оголошення классу
 class File
 {
 private:
-    QString Path;                               // Расположения файла с которым ведуться работы
+    QString Path;                               // Розташування файлу з яким ведуться роботи
 public:
-    File(QString adress);                       // Конструктор принимаючий расположение файла
-    void CsvRead(QStandardItemModel *csvModel); // Загрузка данных из CSV файла в модель таблицы
-    route JsonRead();                           // Чтение Json файла и возвращение массива структур с информацией о маршруте
-    QList<QString> TxtRead();                   // Чтение txt файлов и возвращение списока QString значений (каждое значение строка файла)
-    void TxtWrite(QString data);                // Запись в txt файл QString строки
+    File(QString adress);                       // Конструктор приймаючий розташування файлу
+    void CsvRead(QStandardItemModel *csvModel); // Завантаження даних із CSV файлу в модель таблиці
+    route JsonRead();                           // Читання Json файлу та повернення масиву структур
+                                                // з інформацією про маршрут
+    QList<QString> TxtRead();                   // Читання txt файлів і повернення списку значень QString
+                                                // (кожне значення рядок файлу)
+    void TxtWrite(QString data);                // Запис у txt файл QString рядка
 };
 
 #endif // FILE_H

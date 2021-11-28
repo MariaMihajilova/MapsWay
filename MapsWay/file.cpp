@@ -1,108 +1,116 @@
 #include "file.h"
 
+// Сетер шляху файлу
 File::File(QString adress)
 {
-    Path = adress;  // Запомним путь к фалу
+    Path = adress;  // Запам'ятаємо шлях до файлу
 }
 
+// Зчитування Csv файлу у модель
 void File::CsvRead(QStandardItemModel *csvModel)
 {
     try{
-        QFile file(Path);                                   // Открываем файл
-        if ( !file.open(QFile::ReadOnly | QFile::Text) ) {  // Проверим открыт ли файл
-            throw "1";                                      // Если нет сообщим об ошибке
+        QFile file(Path);                                   // Відкриваємо файл
+        if ( !file.open(QFile::ReadOnly | QFile::Text) ) {  // Перевіримо чи відкрито файл
+            throw "1";                                      // Якщо ні повідомимо про помилку
         } else {
-            // Создаём поток для извлечения данных из файла
+            // Створюємо потік для вилучення даних із файлу
             QTextStream in(&file);
-            // Считываем данные до конца файла
+            // Зчитуємо дані до кінця файлу
             while (!in.atEnd())
             {
                 // Построчно
                 QString line = in.readLine();
-                // Добавляем в модель по строке с элементами
+                // Додаємо до моделі по рядку з елементами
                 QList<QStandardItem *> standardItemsList;
-                // Учитываем, что строка разделяется точкой с запятой на колонки
+                // Враховуємо, що рядок розділяється крапкою з комою на колонки
                 for (QString item : line.split(";")) {
                     standardItemsList.append(new QStandardItem(item));
                 }
                 csvModel->insertRow(csvModel->rowCount(), standardItemsList);
             }
-            file.close();                       // Закроем файл
+            file.close();                       // Закриємо файл
         }
     }
     catch(QString ErrorCode){
-          Exception Errore (ErrorCode);        // Сообщение об ошибке
+          Exception Errore (ErrorCode);        // Повідомлення про помилку
     }
 }
 
+// Зчитування Json файлу
 route File::JsonRead(){
-    QFile file(Path);                                               // Открываем файл
+    QFile file(Path);                                               // Відкриваємо файл
     try {
-        if ( !file.open(QFile::ReadOnly | QFile::Text) ) {          // Проверим открыт ли файл
-            throw "1";                                              // Если нет сообщим об ошибке
+        if ( !file.open(QFile::ReadOnly | QFile::Text) ) {          // Перевіримо чи відкрито файл
+            throw "1";                                              // Якщо ні повідомимо про помилку
         } else{
             // Прочитаем в документ
             QJsonParseError JsonParseError;
             QJsonDocument JsonDocument = QJsonDocument::fromJson(file.readAll(), &JsonParseError);
-            file.close();                                           // Закроем файл
+            file.close();                                           // Закриємо файл
 
-            QJsonObject RootObject = JsonDocument.object();         // Читаем кореной объект
-            QJsonArray Array = RootObject.value("routes").toArray();// Читаем масив маршрутов
+            QJsonObject RootObject = JsonDocument.object();         // Читаємо корінний об'єкт
+            QJsonArray Array = RootObject.value("routes").toArray();// Читаємо масив маршрутів
 
-            route rarray [Array.size()];                            // Выделим место под масив
-            for (int i = 0; i < Array.size(); i++) {                // Заполним масив
+            route rarray [Array.size()];                            // Виділимо місце під масив
+            for (int i = 0; i < Array.size(); i++) {                // Заповнимо масив
                 QJsonObject obj = Array[i].toObject();
                 rarray[i].count = obj.value("count").toInt();
                 rarray[i].numer = obj.value("numer").toString();
-                rarray[i].type  = obj.value("type").toString();
+                rarray[i].type  = obj.value("type").toString();               
+                rarray[i].startTime = obj.value("startTime").toInt();
+                rarray[i].endTime   = obj.value("endTime").toInt();
+                rarray[i].delay     = obj.value("delay").toInt();
+                rarray[i].firstStop = obj.value("firstStop").toInt();
+                rarray[i].endStop   = obj.value("endStop").toInt();
             }
-            return *rarray;                                         // Вернем масив
+            return *rarray;                                         // Повернем масив
         }
     }
     catch(QString ErrorCode) {
-          Exception Errore (ErrorCode);        // Сообщение об ошибке
+          Exception Errore (ErrorCode);        // Повідомлення про помилку
     }
 }
 
+// Зчитування txt файлу у QList<QString>
 QList<QString> File::TxtRead(){
     try {
-        QFile file(Path);                                   // Открываем файл
-        QList<QString> StringList;                          // Создадим список
-        if ( !file.open(QFile::ReadOnly | QFile::Text) ) {  // Проверим открыт ли файл
-            throw "1";                                      // Если нет сообщим об ошибке
-        } else {                                            // Если открыт
-            // Создаём поток для извлечения данных из файла
+        QFile file(Path);                                   // Відкриваємо файл
+        QList<QString> StringList;                          // Створимо список
+        if ( !file.open(QFile::ReadOnly | QFile::Text) ) {  // Перевіримо чи відкрито файл
+            throw "1";                                      // Якщо ні повідомимо про помилку
+        } else {                                            // Якщо відкрити
+            // Створюємо потік для вилучення даних із файлу
             QTextStream in(&file);
-            // Считываем данные до конца файла
+            // Зчитуємо дані до кінця файлу
             while (!in.atEnd())
             {
                 // Построчно
                 QString line = in.readLine();
-                // Добавляем в список по строке с элементами
-                StringList.append(line);
+                // Додаємо до списку по рядку з елементами
             }
-            file.close();                                   // Закроем файл
-            return StringList;                              // Возвращаем модель
+            file.close();                                   // Закриємо файл
+            return StringList;                              // Повертаємо List
         }
     }
     catch(QString ErrorCode) {
-          Exception Errore (ErrorCode);        // Сообщение об ошибке
+          Exception Errore (ErrorCode);        // Повідомлення про помилку
     }
 }
 
-// Запись в txt файл QString строки
+// Запис у txt файл QString рядка
 void File::TxtWrite(QString data){
-    QFile file(Path);                           // Откроем файл
+    QFile file(Path);                           // Відкриємо файл
     try{
-        if (!file.open(QIODevice::WriteOnly)) { // Проверим открыт ли файл
-            throw "1";                          // Если нет сообщим об ошибке
+        if (!file.open(QIODevice::WriteOnly)) { // Перевіримо чи відкрито файл
+            throw "1";                          // Якщо ні повідомимо про помилку
         }
-        else {                                  // Если открыт
-            file.write(data.toUtf8());          // Запишем в файл
-            file.close();                       // Закроем файл
+        else {                                  // Якщо відкрити
+            file.write(data.toUtf8());          // Запишемо у файл
+            file.close();                       // Закриємо файл
         }
     }
     catch(QString ErrorCode) {
-          Exception Errore (ErrorCode);        // Сообщение об ошибке
+          Exception Errore (ErrorCode);        // Повідомлення про помилку
     }
 }

@@ -3,27 +3,52 @@
         {
             "type": "Bus",
             "numer": "17",
-            "count": 8
+            "count": 5,
+            "startTime": 340,
+            "endTime": 1380,
+            "delay": 3,
+            "firstStop": 0,
+            "endStop": 18
         },
         {
             "type": "Bus",
             "numer": "18",
-            "count": 8
+            "count": 2,
+            "startTime": 340,
+            "endTime": 1380,
+            "delay": 3,
+            "firstStop": 0,
+            "endStop": 18
         },
         {
             "type": "Bus",
             "numer": "72",
-            "count": 8
+            "count": 6,
+            "startTime": 310,
+            "endTime": 1380,
+            "delay": 3,
+            "firstStop": 0,
+            "endStop": 10
         },
         {
             "type": "Trolleybus",
-            "numer": "1",
-            "count": 8
+            "numer": "11",
+            "count": 1,
+            "startTime": 310,
+            "endTime": 1380,
+            "delay": 3,
+            "firstStop": 0,
+            "endStop": 7
         },
         {
             "type": "RouteTaxi",
             "numer": "40",
-            "count": 8
+            "count": 8,
+            "startTime": 330,
+            "endTime": 1260,
+            "delay": 3,
+            "firstStop": 0,
+            "endStop": 16
         }
     ]
 }
