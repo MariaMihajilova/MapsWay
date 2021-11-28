@@ -30,5 +30,7 @@
         <file>data/csv/Zaporizhia_Square.csv</file>
         <file>data/csv/Zaporizhzhya_Sich_Newspaper_Editorial_Office.csv</file>
         <file>data/txt/Stops_List.txt</file>
+        <file>data/txt/Stop_Distance_List.txt</file>
+        <file>data/txt/Stope_Name_List.txt</file>
     </qresource>
 </RCC>

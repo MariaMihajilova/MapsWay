@@ -12,7 +12,7 @@ void File::CsvRead(QStandardItemModel *csvModel)
     try{
         QFile file(Path);                                   // Відкриваємо файл
         if ( !file.open(QFile::ReadOnly | QFile::Text) ) {  // Перевіримо чи відкрито файл
-            throw "1";                                      // Якщо ні повідомимо про помилку
+            throw (QString)"1";                             // Якщо ні повідомимо про помилку
         } else {
             // Створюємо потік для вилучення даних із файлу
             QTextStream in(&file);
@@ -42,7 +42,7 @@ route File::JsonRead(){
     QFile file(Path);                                               // Відкриваємо файл
     try {
         if ( !file.open(QFile::ReadOnly | QFile::Text) ) {          // Перевіримо чи відкрито файл
-            throw "1";                                              // Якщо ні повідомимо про помилку
+            throw (QString)"1";                                     // Якщо ні повідомимо про помилку
         } else{
             // Прочитаем в документ
             QJsonParseError JsonParseError;
@@ -78,7 +78,7 @@ QList<QString> File::TxtRead(){
         QFile file(Path);                                   // Відкриваємо файл
         QList<QString> StringList;                          // Створимо список
         if ( !file.open(QFile::ReadOnly | QFile::Text) ) {  // Перевіримо чи відкрито файл
-            throw (QString)'1';                                      // Якщо ні повідомимо про помилку
+            throw (QString)"1";                             // Якщо ні повідомимо про помилку
         } else {                                            // Якщо відкрити
             // Створюємо потік для вилучення даних із файлу
             QTextStream in(&file);
@@ -103,7 +103,7 @@ void File::TxtWrite(QString data){
     QFile file(Path);                           // Відкриємо файл
     try{
         if (!file.open(QIODevice::WriteOnly)) { // Перевіримо чи відкрито файл
-            throw "1";                          // Якщо ні повідомимо про помилку
+            throw (QString)"1";                 // Якщо ні повідомимо про помилку
         }
         else {                                  // Якщо відкрити
             file.write(data.toUtf8());          // Запишемо у файл
