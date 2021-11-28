@@ -2,7 +2,6 @@
 #define TRANSPORTMARKER_H
 
 #include "markerwidget.h"
-#include "mapwidget.h"
 
 #include <QWidget>
 

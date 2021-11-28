@@ -3,6 +3,9 @@
 
 #include <QDialog>
 #include "routeinformation.h"
+#include "file.h"
+#include "route.h"
+
 namespace Ui {
 class RouteSearch;
 }
@@ -12,7 +15,7 @@ class RouteSearch : public QDialog
     Q_OBJECT
 
 public:
-    explicit RouteSearch(QWidget *parent = nullptr);
+    explicit RouteSearch(QWidget *parent, float scale, QPoint offset, Route* routeCtrl);
     ~RouteSearch();
 
 private slots:
@@ -21,6 +24,17 @@ private slots:
 private:
     Ui::RouteSearch *ui;
     RouteInformation *window5;    // вікно iнформація про маршрут
+    QWidget* parent;
+
+    Route* routeCtrl;
+
+    route* routes;
+    int* stopDist;
+
+    float scale;
+    QPoint offset;
+
+
 
 };
 

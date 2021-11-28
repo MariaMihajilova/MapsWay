@@ -8,6 +8,7 @@
 #include "busstopsearch.h"
 #include "routeconstruction.h"
 #include "trafficrules.h"
+#include "route.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -50,6 +51,8 @@ private:
     BusStopSearch *window2;       // вікно пошук зупинки
     RouteConstruction *window3;   // вікно будування маршруту
     TrafficRules *window4;        // вікно правила дорожнього руху
+
+    Route* showRoute;
 
     QSlider* scaleBar;            // Повзунок зміни розміру
 

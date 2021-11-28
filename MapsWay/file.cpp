@@ -36,9 +36,8 @@ void File::CsvRead(QStandardItemModel *csvModel)
           Exception Errore (ErrorCode);        // Повідомлення про помилку
     }
 }
-
 // Зчитування Json файлу
-route File::JsonRead(){
+route* File::JsonRead(){
     QFile file(Path);                                               // Відкриваємо файл
     try {
         if ( !file.open(QFile::ReadOnly | QFile::Text) ) {          // Перевіримо чи відкрито файл
@@ -52,7 +51,7 @@ route File::JsonRead(){
             QJsonObject RootObject = JsonDocument.object();         // Читаємо корінний об'єкт
             QJsonArray Array = RootObject.value("routes").toArray();// Читаємо масив маршрутів
 
-            route rarray [Array.size()];                            // Виділимо місце під масив
+            route* rarray = new route [Array.size()];                            // Виділимо місце під масив
             for (int i = 0; i < Array.size(); i++) {                // Заповнимо масив
                 QJsonObject obj = Array[i].toObject();
                 rarray[i].count = obj.value("count").toInt();
@@ -64,7 +63,7 @@ route File::JsonRead(){
                 rarray[i].firstStop = obj.value("firstStop").toInt();
                 rarray[i].endStop   = obj.value("endStop").toInt();
             }
-            return *rarray;                                         // Повернем масив
+            return rarray;                                         // Повернем масив
         }
     }
     catch(QString ErrorCode) {

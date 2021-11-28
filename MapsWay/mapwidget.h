@@ -1,7 +1,7 @@
 #ifndef MAPWIDGET_H
 #define MAPWIDGET_H
 
-#include "mainwindow.h"
+//#include "mainwindow.h"
 
 #include <QLabel>
 #include <QWidget>

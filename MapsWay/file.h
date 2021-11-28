@@ -38,7 +38,7 @@ private:
 public:
     File(QString adress);                       // Конструктор приймаючий розташування файлу
     void CsvRead(QStandardItemModel *csvModel); // Завантаження даних із CSV файлу в модель таблиці
-    route JsonRead();                           // Читання Json файлу та повернення масиву структур
+    route* JsonRead();                           // Читання Json файлу та повернення масиву структур
                                                 // з інформацією про маршрут
     QList<QString> TxtRead();                   // Читання txt файлів і повернення списку значень QString
                                                 // (кожне значення рядок файлу)

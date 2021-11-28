@@ -32,7 +32,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_action_triggered()         // відкриття вікна Пошук маршруту
 {
-    window = new RouteSearch(this);
+    window = new RouteSearch(this->centralWidget(), scale, QPoint(ui->map->geometry().x(), ui->map->geometry().y()), showRoute);
     window->show();
 }
 
@@ -83,6 +83,7 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event){
         temp = QPoint(ui->map->geometry().x() - temp.x(),
                       ui->map->geometry().y()- temp.y());
         emit moveSignal(temp);
+        emit offset( QPoint(ui->map->geometry().x(), ui->map->geometry().y()));
         pointStart = event->pos();
     }
 }
