@@ -25,7 +25,8 @@ private:
     Ui::BusStopSearch *ui;
     StopInformation *window6;       // вікно показу інформації про зупинку
 
-    QList<QString> stopNames;       // масив імен файлів з розкладом
+    QList<QString> stopPath;       // масив імен файлів з розкладом
+    QList<QString> stopName;
 };
 
 #endif // BUSSTOPSEARCH_H

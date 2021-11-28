@@ -17,7 +17,7 @@ public:
     explicit StopInformation(QWidget *parent = nullptr);
     ~StopInformation();
 
-    void showTable(QString fileName);       // виведення інформації на форму
+    void showTable(QString fileName, QString stopName);       // виведення інформації на форму
 
 private:
     Ui::StopInformation *ui;

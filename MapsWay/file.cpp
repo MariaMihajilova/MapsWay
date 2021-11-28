@@ -88,6 +88,7 @@ QList<QString> File::TxtRead(){
                 // Построчно
                 QString line = in.readLine();
                 // Додаємо до списку по рядку з елементами
+                StringList.append(line);
             }
             file.close();                                   // Закриємо файл
             return StringList;                              // Повертаємо List

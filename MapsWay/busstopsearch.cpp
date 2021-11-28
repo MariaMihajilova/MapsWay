@@ -8,7 +8,10 @@ BusStopSearch::BusStopSearch(QWidget *parent) :
     ui->setupUi(this);
     // проверка считывания данных
     File file(":/data/data/txt/Stops_List.txt");
-    stopNames = file.TxtRead();
+    stopPath = file.TxtRead();
+
+    file = File(":/data/data/txt/Stope_Name_List.txt");
+    stopName = file.TxtRead();
 }
 
 BusStopSearch::~BusStopSearch()
@@ -23,6 +26,7 @@ void BusStopSearch::on_pushButton_clicked()
     // ид не должен быть -1
     // индекс меньше длины stopNames
     int index = ui->comboBox->currentIndex();
-    window6->showTable(stopNames[index]);       // виведення інформації на форму
+
+    window6->showTable(stopPath[index], stopName[index]);       // виведення інформації на форму
 }
 
