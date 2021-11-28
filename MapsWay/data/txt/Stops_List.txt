@@ -1,3 +1,4 @@
+:/data/data/csv/Zaporizhia_Square.csv
 Railway_Station_Zaporozhye-1
 AvtoZAZ
 Bus_Station

@@ -12,7 +12,7 @@ class TransportMarker : public MarkerWidget
 public:
     TransportMarker(QWidget* parent = nullptr);
 
-public :
+protected:
     void move(int value, QPoint offset, float scale);
 };
 

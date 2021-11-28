@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+#include "file.h"
+
 namespace Ui {
 class StopInformation;
 }
@@ -15,8 +17,12 @@ public:
     explicit StopInformation(QWidget *parent = nullptr);
     ~StopInformation();
 
+    void showTable(QString fileName);       // виведення інформації на форму
+
 private:
     Ui::StopInformation *ui;
+
+
 };
 
 #endif // STOPINFORMATION_H

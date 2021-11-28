@@ -12,3 +12,16 @@ StopInformation::~StopInformation()
 {
     delete ui;
 }
+
+void StopInformation::showTable(QString fileName){
+
+    QStandardItemModel* csvModel = new QStandardItemModel(this);
+    csvModel->setColumnCount(5);
+    csvModel->setHorizontalHeaderLabels(QStringList() << "Route" << "Type" << "Start time" << "End time" << "Interval min");
+    ui->tableView->setModel(csvModel); // вставляємо модель в таблицю
+
+    File file(fileName + ".csv"); // вказуємо шлях до файлу
+    file.CsvRead(csvModel);
+
+    ui->label_2->setText(fileName);
+}

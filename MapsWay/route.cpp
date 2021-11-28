@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QtMath>
 
-Route::Route(RouteInf routeInf, float scale, QPoint offset, int* stops, QWidget* parent)
+Route::Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* parent)
 {
     this->routeInf = routeInf;
     this->stops = stops;
@@ -13,14 +13,13 @@ Route::Route(RouteInf routeInf, float scale, QPoint offset, int* stops, QWidget*
     this->offset = offset;
     start = stops[routeInf.firstStop];
 
-    this->vehicleList = new RouteTaxi*[routeInf.vehicleCount];
+    this->vehicleList = new RouteTaxi*[routeInf.count];
 
     timer = new QTimer;
     timer->start(1000);
 
     this->init(parent);
 }
-
 Route::~Route(){
 
 }
@@ -75,7 +74,7 @@ void Route::init(QWidget* parent){
     int globalTimeSeconds = QTime::currentTime().second();
 
     if (globalTimeMinutes >= routeInf.startTime && globalTimeMinutes < routeInf.endTime){
-        for (int i = 0; i < routeInf.vehicleCount; i++){
+        for (int i = 0; i < routeInf.count; i++){
             bool left = false;
             int pos = posInit(((globalTimeMinutes - routeInf.startTime) % routeInf.delay) - 1 + routeInf.delay * i,
                              globalTimeSeconds, &left);

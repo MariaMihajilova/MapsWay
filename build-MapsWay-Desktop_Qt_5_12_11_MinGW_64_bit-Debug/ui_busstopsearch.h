@@ -44,11 +44,18 @@ public:
         pushButton->setGeometry(QRect(20, 210, 351, 41));
         pushButton->setFont(font);
         comboBox = new QComboBox(BusStopSearch);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(100, 100, 191, 21));
         comboBox->setFont(font);
 
         retranslateUi(BusStopSearch);
+
+        comboBox->setCurrentIndex(-1);
+
 
         QMetaObject::connectSlotsByName(BusStopSearch);
     } // setupUi
@@ -58,6 +65,11 @@ public:
         BusStopSearch->setWindowTitle(QApplication::translate("BusStopSearch", "\320\237\320\276\321\210\321\203\320\272 \320\267\321\203\320\277\320\270\320\275\320\272\320\270 ", nullptr));
         label->setText(QApplication::translate("BusStopSearch", "\320\235\320\260\320\267\320\262\320\260 \320\267\321\203\320\277\320\270\320\275\320\272\320\270", nullptr));
         pushButton->setText(QApplication::translate("BusStopSearch", "\320\227\320\275\320\260\320\271\321\202\320\270", nullptr));
+        comboBox->setItemText(0, QApplication::translate("BusStopSearch", "1", nullptr));
+        comboBox->setItemText(1, QApplication::translate("BusStopSearch", "2", nullptr));
+        comboBox->setItemText(2, QApplication::translate("BusStopSearch", "3", nullptr));
+        comboBox->setItemText(3, QApplication::translate("BusStopSearch", "4", nullptr));
+
     } // retranslateUi
 
 };

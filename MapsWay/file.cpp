@@ -78,7 +78,7 @@ QList<QString> File::TxtRead(){
         QFile file(Path);                                   // Відкриваємо файл
         QList<QString> StringList;                          // Створимо список
         if ( !file.open(QFile::ReadOnly | QFile::Text) ) {  // Перевіримо чи відкрито файл
-            throw "1";                                      // Якщо ні повідомимо про помилку
+            throw (QString)'1';                                      // Якщо ні повідомимо про помилку
         } else {                                            // Якщо відкрити
             // Створюємо потік для вилучення даних із файлу
             QTextStream in(&file);

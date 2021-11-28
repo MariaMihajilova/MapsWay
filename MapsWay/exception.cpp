@@ -18,7 +18,7 @@ Exception::Exception(QString key)
     QFile file(":/data/logs/Error.txt");
     try{
         if (!file.open(QIODevice::WriteOnly)) { // Якщо не вийшло правильно відкрити файл
-            throw "0";                          // Викличемо повідомлення
+            throw (QString)"0";                          // Викличемо повідомлення
         }
         else {
             file.write(data.toUtf8());          // Запишемо повідомлення

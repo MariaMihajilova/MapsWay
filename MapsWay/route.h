@@ -2,13 +2,14 @@
 #define ROUTE_H
 
 #include "routetaxi.h"
+#include "file.h"
 
 #include <QList>
 #include <QTimer>
 #include <QTime>
 #include <QObject>
 
-struct RouteInf{
+/*struct RouteInf{
     int id = 1;
     int startTime = 340;
     int endTime = 10000;
@@ -16,14 +17,14 @@ struct RouteInf{
     int vehicleCount = 9;
     int firstStop = 0;
     int endStop = 9;
-};
+};*/
 
 class Route : public QObject
 {
 Q_OBJECT
 
 public:
-    Route(RouteInf routeInf, float scale, QPoint offset, int* stops, QWidget* parent);
+    Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* parent);
     ~Route();
 
     static const int timerDelay = 1000;
@@ -34,7 +35,7 @@ private slots:
     void offsetChanged (QPoint offset);
 
 private:
-    RouteInf routeInf;
+    route routeInf;
     int start;
     int end;
     RouteTaxi** vehicleList;
