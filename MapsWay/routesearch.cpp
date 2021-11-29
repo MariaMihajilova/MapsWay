@@ -41,10 +41,10 @@ void RouteSearch::on_pushButton_clicked()       //відкриття вікна 
         delete routeCtrl;
     }*/
 
-    qDebug() << routes[4].numer << scale << offset << ;
+    qDebug() << routes[4].numer << scale << offset /*<<*/ ;
     routeCtrl = new Route(routes[4], scale, offset, stopDist, parent);
 
-    /*window5 = new RouteInformation(this);
-    window5->show();*/
+    window5 = new RouteInformation(this);
+    window5->show();
 }
 

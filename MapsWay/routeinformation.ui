@@ -18,7 +18,7 @@
     <rect>
      <x>40</x>
      <y>190</y>
-     <width>91</width>
+     <width>211</width>
      <height>21</height>
     </rect>
    </property>
@@ -37,7 +37,7 @@
     <rect>
      <x>40</x>
      <y>80</y>
-     <width>81</width>
+     <width>261</width>
      <height>31</height>
     </rect>
    </property>
@@ -56,7 +56,7 @@
     <rect>
      <x>40</x>
      <y>160</y>
-     <width>141</width>
+     <width>151</width>
      <height>21</height>
     </rect>
    </property>
@@ -75,7 +75,7 @@
     <rect>
      <x>40</x>
      <y>50</y>
-     <width>151</width>
+     <width>171</width>
      <height>31</height>
     </rect>
    </property>
@@ -111,9 +111,9 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>20</y>
-     <width>81</width>
+     <x>600</x>
+     <y>50</y>
+     <width>191</width>
      <height>31</height>
     </rect>
    </property>
@@ -124,7 +124,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Розклад</string>
+    <string>Час початку роботи</string>
    </property>
   </widget>
   <widget class="QTableView" name="tableView">
@@ -137,14 +137,99 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView_2">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>590</x>
-     <y>60</y>
-     <width>256</width>
-     <height>192</height>
+     <x>600</x>
+     <y>80</y>
+     <width>251</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>120</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Час кінця роботи</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>150</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>190</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Приблизний інтервал прибуття</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>220</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

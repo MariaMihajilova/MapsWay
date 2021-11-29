@@ -34,7 +34,7 @@ public:
         StopInformation->setMaximumSize(QSize(698, 365));
         label = new QLabel(StopInformation);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(20, 100, 121, 21));
+        label->setGeometry(QRect(20, 100, 131, 21));
         QFont font;
         font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(14);
