@@ -30,7 +30,6 @@ StopMarker
 {
  background-color: transparent;
  image: url(:/img/img/stop_2.png) 16px 16px;
-
 }
 
 RouteTaxi
@@ -50,7 +49,7 @@ QMenuBar
 
 }
 
-
+/*вимкнено*/
 QMenuBar::disabled
 {
         background-color: #404040;
@@ -59,22 +58,21 @@ QMenuBar::disabled
 
 }
 
-
+/*активний*/
 QMenuBar::item
 {
     background-color: transparent;
 
 }
 
-
+/*при виборі*/
 QMenuBar::item:selected
 {
     background-color: #5ab8a0;
     border: 1px solid #41cd52;
 
 }
-
-
+/*натиснутий*/
 QMenuBar::item:pressed
 {
     background-color: #3e7f6e;
@@ -195,7 +193,7 @@ QSlider
         background-color: transparent;
 
 }
-
+/*повзунець*/
 QSlider::groove:horizontal
 {
         background-color: transparent;
@@ -203,14 +201,14 @@ QSlider::groove:horizontal
 
 }
 
-
+/*ліворуч від повзунка*/
 QSlider::sub-page:horizontal
 {
         background-color: #2F4F4F;
 
 }
 
-
+/*праворуч від повзунка*/
 QSlider::add-page:horizontal
 {
         background-color: #a9a9aa;
