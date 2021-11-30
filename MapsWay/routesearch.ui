@@ -59,6 +59,34 @@
      <pointsize>14</pointsize>
     </font>
    </property>
+   <property name="currentIndex">
+    <number>-1</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>17</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>72</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>40</string>
+    </property>
+   </item>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">

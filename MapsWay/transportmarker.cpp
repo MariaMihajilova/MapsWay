@@ -1,7 +1,5 @@
 #include "transportmarker.h"
 
-#include <QDebug>
-
 TransportMarker::TransportMarker(QWidget* parent) : MarkerWidget(parent) {}
 
 void TransportMarker::move(int value, QPoint offset, float scale){

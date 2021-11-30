@@ -1,6 +1,5 @@
 #include "route.h"
 
-#include <QDebug>
 #include <QtMath>
 
 Route::Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* parent)
@@ -21,7 +20,12 @@ Route::Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* pa
     this->init(parent);
 }
 Route::~Route(){
-
+    delete stops;
+    delete timer;
+    for (int i = 0; i < routeInf.count; i++){
+        delete vehicleList[i];
+    }
+    delete[] vehicleList;
 }
 
 int Route::posInit(int timeMin, int timeSec, bool* left){
@@ -29,8 +33,6 @@ int Route::posInit(int timeMin, int timeSec, bool* left){
     int dist = timeMin * 97 + (float)97/60 * timeSec;
     int pos = stops[currStop];
     bool temp = true;
-
-    qDebug() << timeMin << ' ' << dist;
 
     while (temp){
         if (*left){
@@ -65,7 +67,6 @@ int Route::posInit(int timeMin, int timeSec, bool* left){
             }
         }
     }
-    qDebug() << dist << ' ' << pos << ' ' << *left;
     return pos;
 }
 

@@ -136,6 +136,9 @@
      <height>192</height>
     </rect>
    </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
   </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">

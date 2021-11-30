@@ -9,16 +9,6 @@
 #include <QTime>
 #include <QObject>
 
-/*struct RouteInf{
-    int id = 1;
-    int startTime = 340;
-    int endTime = 10000;
-    int delay = 3;
-    int vehicleCount = 9;
-    int firstStop = 0;
-    int endStop = 9;
-};*/
-
 class Route : public QObject
 {
 Q_OBJECT

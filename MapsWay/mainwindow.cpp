@@ -1,6 +1,5 @@
 #include <QWheelEvent>
 #include <QMouseEvent>
-#include <QDebug>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -14,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     scaleBar = new QSlider;
     scaleBar->setOrientation(Qt::Horizontal);
     scaleBar->setMinimum(100); scaleBar->setMaximum(250); scaleBar->setValue(100);
-    connect(scaleBar, SIGNAL(valueChanged(int)), this, SLOT(on_scaleBar_valueChanged(int)));
+    connect(scaleBar, SIGNAL(valueChanged(int)), this, SLOT(scaleBar_valueChanged(int)));
 
     ui->statusBar->addWidget(scaleBar, 0);
 
@@ -22,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->rectBounds = this->geometry();
     this->rectBounds.setHeight(rectBounds.height() - 45);
     scale = 1;
+
+    emit initialization();
 }
 
 MainWindow::~MainWindow()
@@ -88,7 +89,7 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event){
     }
 }
 
-void MainWindow::on_scaleBar_valueChanged(int value)
+void MainWindow::scaleBar_valueChanged(int value)
 {
     scale = (float)value / 100;
     QPoint tempSize(ui->map->geometry().width(), ui->map->geometry().height());
@@ -97,6 +98,7 @@ void MainWindow::on_scaleBar_valueChanged(int value)
     emit moveSignal(vec, this->rectBounds);
     emit moveSignal(QPoint(ui->map->geometry().x(),
                            ui->map->geometry().y()));
+    emit offset( QPoint(ui->map->geometry().x(), ui->map->geometry().y()));
 
 }
 

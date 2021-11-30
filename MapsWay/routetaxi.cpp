@@ -1,7 +1,5 @@
 #include "routetaxi.h"
 
-#include <QDebug>
-
 RouteTaxi::RouteTaxi(QWidget* parent, int pos, QPoint offset, float scale, bool left, int firstStop, int lastStop, int* stops) : TransportMarker(parent) {
     connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(scaleChanged(float)));
     connect(parent->parentWidget(), SIGNAL(offset(QPoint)), this, SLOT(offsetChanged(QPoint)));

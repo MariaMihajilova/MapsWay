@@ -1,7 +1,5 @@
 #include "pathbuilder.h"
 
-#include <QDebug>
-
 PathBuilder::PathBuilder(QWidget *parent) : QWidget(parent)
 {
     this->setGeometry(0,0,800,600);

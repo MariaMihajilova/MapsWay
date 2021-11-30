@@ -43,7 +43,7 @@ private slots:
 
     void on_action_5_triggered();
 
-    void on_scaleBar_valueChanged(int value);
+    void scaleBar_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;

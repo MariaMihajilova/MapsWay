@@ -66,6 +66,19 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="StopMarker" name="label">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>140</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -124,6 +137,11 @@
    <class>MapWidget</class>
    <extends>QLabel</extends>
    <header location="global">mapwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>StopMarker</class>
+   <extends>QLabel</extends>
+   <header>stopmarker.h</header>
   </customwidget>
  </customwidgets>
  <resources>

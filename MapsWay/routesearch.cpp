@@ -1,8 +1,6 @@
 #include "routesearch.h"
 #include "ui_routesearch.h"
 
-#include <QDebug>
-
 RouteSearch::RouteSearch(QWidget *parent, float scale, QPoint offset, Route* routeCtrl) :
     QDialog(parent),
     ui(new Ui::RouteSearch)
@@ -15,13 +13,15 @@ RouteSearch::RouteSearch(QWidget *parent, float scale, QPoint offset, Route* rou
     File file(":/data/data/json/routes.json");
     routes = file.JsonRead();
     file = File(":/data/data/txt/Stop_Distance_List.txt");
+
     QList<QString> temp = file.TxtRead();
-
     stopDist = new int[temp.length()];
-
     for (int i = 0; i < temp.length(); i++){
         stopDist[i] = temp[i].toInt();
     }
+
+    file = File(":/data/data/txt/Stope_Name_List.txt");
+    stopNames = file.TxtRead();
 
     this->routeCtrl = routeCtrl;
     this->parent = parent;
@@ -41,10 +41,10 @@ void RouteSearch::on_pushButton_clicked()       //відкриття вікна 
         delete routeCtrl;
     }*/
 
-    qDebug() << routes[4].numer << scale << offset /*<<*/ ;
-    routeCtrl = new Route(routes[4], scale, offset, stopDist, parent);
+    routeCtrl = new Route(routes[index], scale, offset, stopDist, parent);
 
     window5 = new RouteInformation(this);
     window5->show();
+    window5->showInf(routes[index], stopNames);
 }
 

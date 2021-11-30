@@ -30,6 +30,7 @@ private:
 
     route* routes;
     int* stopDist;
+    QList<QString> stopNames;
 
     float scale;
     QPoint offset;

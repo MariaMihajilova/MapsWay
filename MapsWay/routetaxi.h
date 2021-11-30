@@ -20,8 +20,6 @@ private slots:
     void offsetChanged (QPoint offset);
 
 private :
-    QPoint offset;
-    float scale;
     int pos;
     bool isLeftSide;
     float reside;

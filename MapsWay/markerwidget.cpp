@@ -7,9 +7,12 @@ MarkerWidget::MarkerWidget(QWidget* parent) : QLabel(parent)
     connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(on_scaleChanged(float)));
     connect(parent->parentWidget(), SIGNAL(moveSignal(QPoint)), this, SLOT(move(QPoint)));
     connect(parent->parentWidget(), SIGNAL(initialization()), this, SLOT(init()));
+    scale = 1;
+    offset = QPoint(0, 0);
 }
 
 void MarkerWidget::on_scaleChanged(float scale){
+    this->scale = scale;
     this->setGeometry((int)(this->startPoint.x() * scale),
                       (int)(this->startPoint.y() * scale),
                       this->geometry().width(),

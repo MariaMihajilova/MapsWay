@@ -17,6 +17,8 @@ private slots:
 
 protected:
     QPoint startPoint;
+    float scale;
+    QPoint offset;
 };
 
 #endif // MARKERWIDGET_H

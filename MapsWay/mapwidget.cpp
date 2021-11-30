@@ -1,7 +1,5 @@
 #include "mapwidget.h"
 
-#include <QDebug>
-
 MapWidget::MapWidget(QWidget* parent) : QLabel(parent)
 {
     this->setGeometry(0, 0, 887, 912);
