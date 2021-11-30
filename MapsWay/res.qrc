@@ -3,6 +3,8 @@
         <file>img/Maps_1.png</file>
         <file>img/icon.ico</file>
         <file>img/Logo.png</file>
+        <file>img/stop_2.png</file>
+        <file>img/bus_3.png</file>
     </qresource>
     <qresource prefix="/design">
         <file>css/style.css</file>

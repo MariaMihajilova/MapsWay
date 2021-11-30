@@ -31,15 +31,21 @@ RouteSearch::~RouteSearch()
 {
     delete ui;
 }
-
+#include <QDebug>
 void RouteSearch::on_pushButton_clicked()       //відкриття вікна Інформація про маршрут
 
 {
     int index = ui->comboBox->currentIndex();
 
-    /*if (routeCtrl != nullptr){
-        delete routeCtrl;
-    }*/
+    qDebug() << routeCtrl;
+    if (routeCtrl != nullptr){
+        Route *temp = routeCtrl;
+        //routeCtrl = nullptr;
+        //temp->~Route();
+        delete temp;
+        //delete routeCtrl;
+        qDebug() << temp;
+    }
 
     routeCtrl = new Route(routes[index], scale, offset, stopDist, parent);
 

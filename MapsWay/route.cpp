@@ -20,7 +20,7 @@ Route::Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* pa
     this->init(parent);
 }
 Route::~Route(){
-    delete stops;
+    //delete stops;
     delete timer;
     for (int i = 0; i < routeInf.count; i++){
         delete vehicleList[i];
@@ -80,7 +80,7 @@ void Route::init(QWidget* parent){
             int pos = posInit(((globalTimeMinutes - routeInf.startTime) % routeInf.delay) - 1 + routeInf.delay * i,
                              globalTimeSeconds, &left);
             vehicleList[i] = new RouteTaxi(parent, pos, offset, scale, left, routeInf.firstStop, routeInf.endStop, stops);
-            vehicleList[i]->setText("Bus"+QString::number(i));
+            //vehicleList[i]->setText("Bus"+QString::number(i));
             connect(timer, SIGNAL(timeout()), vehicleList[i], SLOT(Update()));
         }
     }

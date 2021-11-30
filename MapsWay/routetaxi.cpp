@@ -19,6 +19,7 @@ RouteTaxi::RouteTaxi(QWidget* parent, int pos, QPoint offset, float scale, bool 
     this->stopMin = 0;
     this->stopSec = 0;
     this->prewStop = this->findStop();
+    this->setGeometry(this->geometry().x(), this->geometry().y(), 16, 16);
 }
 
 int RouteTaxi::findStop(){

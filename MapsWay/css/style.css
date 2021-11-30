@@ -26,6 +26,21 @@ QLabel::disabled
 
 }
 
+StopMarker
+{
+ background-color: transparent;
+ image: url(:/img/img/stop_2.png) 16px 16px;
+
+}
+
+RouteTaxi
+{
+
+ image: url(:/img/img/bus_3.png) 16px 16px;
+ width: 16px;
+ height: 16px;
+}
+
 /*-----QMenuBar-----*/
 QMenuBar
 {

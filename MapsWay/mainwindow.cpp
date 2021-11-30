@@ -22,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->rectBounds.setHeight(rectBounds.height() - 45);
     scale = 1;
 
+    this->showRoute = nullptr;
+
     emit initialization();
 }
 
@@ -30,9 +32,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+#include <QDebug>
 void MainWindow::on_action_triggered()         // відкриття вікна Пошук маршруту
 {
+    //*//
     window = new RouteSearch(this->centralWidget(), scale, QPoint(ui->map->geometry().x(), ui->map->geometry().y()), showRoute);
     window->show();
 }
