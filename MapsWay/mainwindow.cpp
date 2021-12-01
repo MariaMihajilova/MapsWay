@@ -54,19 +54,24 @@ void MainWindow::on_action_3_triggered()      // відкриття вікна �
     window3->show();
 }
 
-
-void MainWindow::on_action_4_triggered()      // відкриття вікна Правила дорожнього руху
-
+void MainWindow::on_action_5_triggered()
 {
-    window4 = new TrafficRules(this);
-    window4->show();
+    window6 = new Help(this);
+    window6->show();
 }
 
 
-void MainWindow::on_action_5_triggered()      // розрахунок трафіку
-
+void MainWindow::on_action_6_triggered()
 {
+    window5 = new About(this);
+    window5->show();
+}
 
+
+void MainWindow::on_action_7_triggered()     // відкриття вікна Правила дорожнього руху
+{
+    window4 = new TrafficRules(this);
+    window4->show();
 }
 
 void MainWindow::wheelEvent(QWheelEvent *event){
@@ -104,4 +109,3 @@ void MainWindow::scaleBar_valueChanged(int value)
     emit offset( QPoint(ui->map->geometry().x(), ui->map->geometry().y()));
 
 }
-

@@ -270,6 +270,21 @@ QStatusBar
 
 }
 
+/*QGroupBox*/
+QGroupBox
+{
+    background-color: transparent;
+    color: #000000;
+}
+
+/*QTextEdit*/
+QTextEdit
+{
+    background-color: #505050;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
 /*-----QTableView-----*/
 QTableView
 {

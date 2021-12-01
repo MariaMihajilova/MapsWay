@@ -9,6 +9,8 @@
 #include "routeconstruction.h"
 #include "trafficrules.h"
 #include "route.h"
+#include "about.h"
+#include "help.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,11 +41,13 @@ private slots:
 
     void on_action_3_triggered();
 
-    void on_action_4_triggered();
+    void scaleBar_valueChanged(int value);
 
     void on_action_5_triggered();
 
-    void scaleBar_valueChanged(int value);
+    void on_action_6_triggered();
+
+    void on_action_7_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -51,6 +55,8 @@ private:
     BusStopSearch *window2;       // вікно пошук зупинки
     RouteConstruction *window3;   // вікно будування маршруту
     TrafficRules *window4;        // вікно правила дорожнього руху
+    About *window5;
+    Help *window6;
 
     Route* showRoute;
 

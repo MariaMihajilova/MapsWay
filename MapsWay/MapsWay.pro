@@ -9,9 +9,11 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    about.cpp \
     busstopsearch.cpp \
     exception.cpp \
     file.cpp \
+    help.cpp \
     main.cpp \
     mainwindow.cpp \
     mapwidget.cpp \
@@ -28,9 +30,11 @@ SOURCES += \
     transportmarker.cpp
 
 HEADERS += \
+    about.h \
     busstopsearch.h \
     exception.h \
     file.h \
+    help.h \
     mainwindow.h \
     mapwidget.h \
     markerwidget.h \
@@ -46,7 +50,9 @@ HEADERS += \
     transportmarker.h
 
 FORMS += \
+    about.ui \
     busstopsearch.ui \
+    help.ui \
     mainwindow.ui \
     routeconstruction.ui \
     routeinformation.ui \

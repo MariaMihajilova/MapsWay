@@ -48,7 +48,12 @@ void RouteSearch::on_pushButton_clicked()       //відкриття вікна 
     }
 
     routeCtrl = new Route(routes[index], scale, offset, stopDist, parent);
+}
 
+
+void RouteSearch::on_pushButton_2_clicked()
+{
+    int index = ui->comboBox->currentIndex();
     window5 = new RouteInformation(this);
     window5->show();
     window5->showInf(routes[index], stopNames);

@@ -28,9 +28,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>40</y>
-     <width>241</width>
+     <x>50</x>
+     <y>20</y>
+     <width>451</width>
      <height>31</height>
     </rect>
    </property>
@@ -41,7 +41,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Правила дорожнього руху</string>
+    <string>Правила користування громадським транспортом</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
