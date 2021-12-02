@@ -2,6 +2,7 @@
 #define STOPMARKER_H
 
 #include "markerwidget.h"
+#include "stopinformation.h"
 
 #include <QWidget>
 #include <QMouseEvent>
@@ -15,8 +16,13 @@ public:
 signals:
     void clickSignal();
 
+private slots:
+    void infClosed();
+
 private:
     void mousePressEvent(QMouseEvent* event);
+
+    bool isOpen;
 };
 
 #endif // STOPMARKER_H

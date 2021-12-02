@@ -13,6 +13,10 @@ StopInformation::~StopInformation()
     delete ui;
 }
 
+void StopInformation::closeEvent ( QCloseEvent * e){
+    emit closed();
+}
+
 void StopInformation::showTable(QString fileName, QString stopName){
 
     QStandardItemModel* csvModel = new QStandardItemModel(this);

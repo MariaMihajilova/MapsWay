@@ -19,8 +19,13 @@ public:
 
     void showTable(QString fileName, QString stopName);       // виведення інформації на форму
 
+signals:
+    void closed();
+
 private:
     Ui::StopInformation *ui;
+
+    void closeEvent ( QCloseEvent * e);
 
 
 };

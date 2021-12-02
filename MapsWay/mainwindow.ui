@@ -78,6 +78,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>0</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_2">
     <property name="geometry">
@@ -90,6 +93,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>1</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_3">
@@ -104,6 +110,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>2</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_4">
     <property name="geometry">
@@ -116,6 +125,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>3</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_5">
@@ -130,6 +142,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>4</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_6">
     <property name="geometry">
@@ -142,6 +157,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>5</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_7">
@@ -156,6 +174,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>6</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_8">
     <property name="geometry">
@@ -168,6 +189,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>7</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_9">
@@ -182,6 +206,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>8</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_10">
     <property name="geometry">
@@ -194,6 +221,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>9</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_11">
@@ -208,6 +238,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>10</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_12">
     <property name="geometry">
@@ -220,6 +253,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>11</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_13">
@@ -234,6 +270,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>12</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_14">
     <property name="geometry">
@@ -246,6 +285,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>13</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_15">
@@ -260,6 +302,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>14</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_16">
     <property name="geometry">
@@ -272,6 +317,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>15</number>
     </property>
    </widget>
    <widget class="StopMarker" name="label_17">
@@ -286,6 +334,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>16</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_18">
     <property name="geometry">
@@ -299,6 +350,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="id" stdset="0">
+     <number>17</number>
+    </property>
    </widget>
    <widget class="StopMarker" name="label_19">
     <property name="geometry">
@@ -311,6 +365,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="id" stdset="0">
+     <number>18</number>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox">
@@ -421,7 +478,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
