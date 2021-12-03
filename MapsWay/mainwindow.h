@@ -8,6 +8,7 @@
 #include "busstopsearch.h"
 #include "routeconstruction.h"
 #include "trafficrules.h"
+#include "pathbuilder.h"
 #include "route.h"
 #include "about.h"
 #include "help.h"
@@ -30,9 +31,6 @@ signals:
     void moveSignal (QPoint vec);                        // Сигнал зміни позиції інтерфейсу для міток
     void initialization ();
     void offset (QPoint offset);
-
-    void newPath(int start, int end);
-    void pathVisible(bool visible);
 
 private slots:
     void on_action_triggered();
@@ -59,6 +57,7 @@ private:
     Help *window6;
 
     Route* showRoute;
+    PathBuilder* path;
 
     QSlider* scaleBar;            // Повзунок зміни розміру
 

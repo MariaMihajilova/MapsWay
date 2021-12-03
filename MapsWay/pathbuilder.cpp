@@ -1,12 +1,12 @@
 #include "pathbuilder.h"
 
+#include <QDebug>
+
 PathBuilder::PathBuilder(QWidget *parent) : QWidget(parent)
 {
     this->setGeometry(0,0,800,600);
     connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(scaleChanged(float)));
     connect(parent->parentWidget(), SIGNAL(offset(QPoint)), this, SLOT(offsetChanged(QPoint)));
-    connect(parent->parentWidget(), SIGNAL(pathVisible(bool)), this, SLOT(visibleChanged(bool)));
-    connect(parent->parentWidget(), SIGNAL(newPath(int,int)), this, SLOT(newPath(int,int)));
     scale = 1;
     offset = QPoint(0, 0);
 
@@ -32,10 +32,14 @@ QPoint PathBuilder::findCoords(int pos){
         startPoint = QPoint(73, 12);
         vec = QPoint(509, 408);
         coef = 0;
-    } else if (pos >= 0 && pos <= 652){
+    } else if (pos >= 0 && pos <= 486){
         startPoint = QPoint(73, 12);
-        vec = QPoint(509, 408);
-        coef = (float)pos / 652;
+        vec = QPoint(377, 308);
+        coef = (float)pos / 486;
+    } else if (pos >= 487 && pos <=652){
+        startPoint = QPoint(450, 320);
+        vec = QPoint(132, 100);
+        coef = (float)(pos - 486) / 165;
     } else if (pos >= 653 && pos <= 719) {
         startPoint = QPoint(582, 420);
         vec = QPoint(64, 21);
@@ -71,8 +75,10 @@ QPoint PathBuilder::findCoords(int pos){
 }
 
 int PathBuilder::PartEnd(int pos){
-    if (pos <= 652){
-        return 652;
+    if (pos <= 486){
+        return 486;
+    } else if (pos <=651){
+        return 651;
     } else if (pos <= 719) {
         return 719;
     } else if (pos <= 1067) {

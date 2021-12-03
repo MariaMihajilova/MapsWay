@@ -14,6 +14,7 @@ StopInformation::~StopInformation()
 }
 
 void StopInformation::closeEvent ( QCloseEvent * e){
+    Q_UNUSED(e);
     emit closed();
 }
 

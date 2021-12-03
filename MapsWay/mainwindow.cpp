@@ -4,6 +4,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QDebug>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -23,6 +25,11 @@ MainWindow::MainWindow(QWidget *parent)
     scale = 1;
 
     this->showRoute = nullptr;
+
+    path = new PathBuilder(this->centralWidget());
+    path->setGeometry(this->geometry());
+    path->lower();
+    ui->map->lower();
 
     emit initialization();
 }
@@ -51,6 +58,8 @@ void MainWindow::on_action_2_triggered()       // відкриття вікна 
 void MainWindow::on_action_3_triggered()      // відкриття вікна Будування маршруту
 {
     window3 = new RouteConstruction(this);
+    connect(window3, SIGNAL(visibleChanged(bool)), path, SLOT(visibleChanged(bool)));
+    connect(window3, SIGNAL(newPath(int,int)), path, SLOT(newPath(int,int)));
     window3->show();
 }
 
