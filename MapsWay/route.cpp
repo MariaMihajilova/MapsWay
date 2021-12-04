@@ -13,17 +13,22 @@ Route::Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* pa
     start = stops[routeInf.firstStop];
 
     this->vehicleList = new RouteTaxi*[routeInf.count];
+    for (int i = 0; i < routeInf.count; i++){
+        vehicleList[i] = nullptr;
+    }
 
     timer = new QTimer;
     timer->start(1000);
 
     this->init(parent);
 }
+
 Route::~Route(){
-    //delete stops;
     delete timer;
     for (int i = 0; i < routeInf.count; i++){
-        delete vehicleList[i];
+        if (vehicleList[i] != nullptr){
+            delete vehicleList[i];
+        }
     }
     delete[] vehicleList;
 }

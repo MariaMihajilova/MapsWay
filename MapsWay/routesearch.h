@@ -23,6 +23,9 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void scaleChanged(float scale);
+    void offsetChanged(QPoint offset);
+
 private:
     Ui::RouteSearch *ui;
     RouteInformation *window5;    // вікно iнформація про маршрут

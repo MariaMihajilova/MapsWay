@@ -1,7 +1,5 @@
 #include "markerwidget.h"
 
-#include <QDebug>
-
 MarkerWidget::MarkerWidget(QWidget* parent) : QLabel(parent)
 {
     connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(on_scaleChanged(float)));

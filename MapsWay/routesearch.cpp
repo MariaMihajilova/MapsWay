@@ -7,6 +7,9 @@ RouteSearch::RouteSearch(QWidget *parent, float scale, QPoint offset, Route* rou
 {
     ui->setupUi(this);
 
+    connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(scaleChanged(float)));
+    connect(parent->parentWidget(), SIGNAL(offset(QPoint)), this, SLOT(offsetChanged(QPoint)));
+
     this->scale = scale;
     this->offset = offset;
     try {
@@ -52,7 +55,7 @@ RouteSearch::~RouteSearch()
 {
     delete ui;
 }
-#include <QDebug>
+
 void RouteSearch::on_pushButton_clicked()       //відкриття вікна Інформація про маршрут
 {
     try {
@@ -61,14 +64,8 @@ void RouteSearch::on_pushButton_clicked()       //відкриття вікна 
         {
             throw (QString) "2";
         }
-        qDebug() << routeCtrl;
         if (routeCtrl != nullptr){
-            Route *temp = routeCtrl;
-            //routeCtrl = nullptr;
-            //temp->~Route();
-            delete temp;
-            //delete routeCtrl;
-            qDebug() << temp;
+            delete routeCtrl;
         }
 
         routeCtrl = new Route(routes[index], scale, offset, stopDist, parent);
@@ -98,3 +95,10 @@ void RouteSearch::on_pushButton_2_clicked()
     }
 }
 
+void RouteSearch::scaleChanged (float scale){
+    this->scale = scale;
+}
+
+void RouteSearch::offsetChanged (QPoint offset){
+    this->offset = offset;
+}

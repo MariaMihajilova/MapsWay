@@ -1,8 +1,6 @@
 #include "routeinformation.h"
 #include "ui_routeinformation.h"
 
-#include <QDebug>
-
 RouteInformation::RouteInformation(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::RouteInformation)
