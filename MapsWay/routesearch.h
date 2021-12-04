@@ -36,9 +36,6 @@ private:
 
     float scale;
     QPoint offset;
-
-
-
 };
 
 #endif // ROUTESEARCH_H

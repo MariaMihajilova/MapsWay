@@ -68,6 +68,7 @@ route* File::JsonRead(){
     }
     catch(QString ErrorCode) {
           Exception Errore (ErrorCode);        // Повідомлення про помилку
+          return nullptr;
     }
 }
 #include <QTextCodec>
@@ -96,7 +97,8 @@ QList<QString> File::TxtRead(){
     }
     catch(QString ErrorCode) {
           Exception Errore (ErrorCode);        // Повідомлення про помилку
-    }
+          return QList<QString>();
+    }    
 }
 
 // Запис у txt файл QString рядка

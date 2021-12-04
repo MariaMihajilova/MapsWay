@@ -6,12 +6,26 @@ BusStopSearch::BusStopSearch(QWidget *parent) :
     ui(new Ui::BusStopSearch)
 {
     ui->setupUi(this);
-    // проверка считывания данных
-    File file(":/data/data/txt/Stops_List.txt");
-    stopPath = file.TxtRead();
+    try {
+        File file(":/data/data/txt/Stops_List.txt");
+        stopPath = file.TxtRead();
+        if (stopPath.empty())
+        {
+            throw (QString) "4";
+        }
 
-    file = File(":/data/data/txt/Stope_Name_List.txt");
-    stopName = file.TxtRead();
+        file = File(":/data/data/txt/Stope_Name_List.txt");
+        stopName = file.TxtRead();
+        if (stopName.empty())
+        {
+            throw (QString) "4";
+        }
+    }
+    catch(QString ErrorCode)
+    {
+        Exception Errore (ErrorCode);
+        this->deleteLater();
+    }
 }
 
 BusStopSearch::~BusStopSearch()
@@ -21,12 +35,20 @@ BusStopSearch::~BusStopSearch()
 
 void BusStopSearch::on_pushButton_clicked()
 {
-    window6 = new StopInformation(this);
-    window6->show();
-    // ид не должен быть -1
-    // индекс меньше длины stopNames
-    int index = ui->comboBox->currentIndex();
+    try{
+        window6 = new StopInformation(this);
+        window6->show();
+        int index = ui->comboBox->currentIndex();
+        if (index <= -1)
+        {
+            throw (QString) "2";
+        }
 
-    window6->showTable(stopPath[index], stopName[index]);       // виведення інформації на форму
+        window6->showTable(stopPath[index], stopName[index]);       // виведення інформації на форму
+    }
+    catch(QString ErrorCode)
+    {
+        Exception Errore (ErrorCode);
+    }
 }
 

@@ -61,6 +61,5 @@ void MapWidget::move(QPoint vec, QRect windowRect){
                               this->geometry().width(),
                               this->geometry().height());
         }
-
     }
 }

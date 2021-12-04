@@ -3,20 +3,20 @@
         {
             "type": "Автобус",
             "numer": "17",
-            "count": 5,
+            "count": 6,
             "startTime": 340,
             "endTime": 1380,
-            "delay": 13,
+            "delay": 10,
             "firstStop": 0,
             "endStop": 18
         },
         {
             "type": "Автобус",
             "numer": "18",
-            "count": 2,
+            "count": 4,
             "startTime": 340,
             "endTime": 1380,
-            "delay": 3,
+            "delay": 15,
             "firstStop": 0,
             "endStop": 18
         },
@@ -26,17 +26,17 @@
             "count": 6,
             "startTime": 310,
             "endTime": 1380,
-            "delay": 3,
+            "delay": 10,
             "firstStop": 0,
             "endStop": 10
         },
         {
             "type": "Тролейбус",
             "numer": "11",
-            "count": 1,
+            "count": 2,
             "startTime": 310,
             "endTime": 1380,
-            "delay": 3,
+            "delay": 30,
             "firstStop": 0,
             "endStop": 7
         },

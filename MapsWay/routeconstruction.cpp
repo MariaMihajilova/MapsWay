@@ -6,14 +6,25 @@ RouteConstruction::RouteConstruction(QWidget *parent) :
     ui(new Ui::RouteConstruction)
 {
     ui->setupUi(this);
-    File file(":/data/data/txt/Stop_Distance_List.txt");
+    try {
+        File file(":/data/data/txt/Stop_Distance_List.txt");
 
-    QList<QString> temp = file.TxtRead();
-    stopDist = new int[temp.length()];
-    for (int i = 0; i < temp.length(); i++){
-        stopDist[i] = temp[i].toInt();
+        QList<QString> temp = file.TxtRead();
+        if (temp.size() == 0)
+        {
+            throw (QString) "5";
+        }
+
+        stopDist = new int[temp.length()];
+        for (int i = 0; i < temp.length(); i++){
+            stopDist[i] = temp[i].toInt();
+        }
     }
-
+    catch(QString ErrorCode)
+    {
+        Exception Errore (ErrorCode);
+        this->deleteLater();
+    }
 }
 
 RouteConstruction::~RouteConstruction()
@@ -28,15 +39,31 @@ void RouteConstruction::closeEvent ( QCloseEvent * e){
 
 void RouteConstruction::on_pushButton_clicked()      // функція побудови маршруту
 {
-    int start = ui->comboBox->currentIndex();
-    int end = ui->comboBox_2->currentIndex();
+    try {
+        int start = ui->comboBox->currentIndex();
+        int end = ui->comboBox_2->currentIndex();
+        if ((start <= -1) || (end <= -1))
+        {
+            throw (QString) "2";
+        }
 
-    if (start >= end){
-        emit visibleChanged(true);
-        emit newPath(stopDist[end], stopDist[start]);
-    } else {
-        emit visibleChanged(true);
-        emit newPath(stopDist[start], stopDist[end]);
+        if ((stopDist[start] < 1) || (stopDist[start] > 1266) ||
+            (stopDist[end] < 1) || (stopDist[end] > 1266))
+        {
+            throw (QString) "3";
+        }
+
+        if (start >= end){
+            emit visibleChanged(true);
+            emit newPath(stopDist[end], stopDist[start]);
+        } else {
+            emit visibleChanged(true);
+            emit newPath(stopDist[start], stopDist[end]);
+        }
+    }
+    catch(QString ErrorCode)
+    {
+        Exception Errore (ErrorCode);
     }
 }
 
