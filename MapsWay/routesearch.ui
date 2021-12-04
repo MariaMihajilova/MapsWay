@@ -60,7 +60,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>-1</number>
+    <number>0</number>
    </property>
    <property name="maxVisibleItems">
     <number>5</number>
@@ -77,12 +77,12 @@
    </item>
    <item>
     <property name="text">
-     <string>11</string>
+     <string>72</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>72</string>
+     <string>11</string>
     </property>
    </item>
    <item>
