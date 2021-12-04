@@ -15,13 +15,13 @@ Exception::Exception(QString key)
     messageBox.critical(0,"Error №" + key, value +" !");
 
     // Запис повідомлення до звіту про помилки
-    QFile file(":/data/logs/Error.txt");
+    QFile file("logs/Error_Logs.txt");
     try{
-        if (!file.open(QIODevice::WriteOnly)) { // Якщо не вийшло правильно відкрити файл
+        if (!file.open(QIODevice::Append)) { // Якщо не вийшло правильно відкрити файл
             throw (QString)"0";                          // Викличемо повідомлення
         }
         else {
-            file.write(data.toUtf8());          // Запишемо повідомлення
+            file.write(data.toUtf8() + '\n');          // Запишемо повідомлення
             file.close();                       // Закриємо файл
         }
     }

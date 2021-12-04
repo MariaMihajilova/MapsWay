@@ -70,7 +70,7 @@ route* File::JsonRead(){
           Exception Errore (ErrorCode);        // Повідомлення про помилку
     }
 }
-
+#include <QTextCodec>
 // Зчитування txt файлу у QList<QString>
 QList<QString> File::TxtRead(){
     try {
@@ -81,6 +81,7 @@ QList<QString> File::TxtRead(){
         } else {                                            // Якщо відкрити
             // Створюємо потік для вилучення даних із файлу
             QTextStream in(&file);
+            in.setCodec("UTF-8");
             // Зчитуємо дані до кінця файлу
             while (!in.atEnd())
             {

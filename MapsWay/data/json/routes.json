@@ -1,7 +1,7 @@
 {
     "routes": [
         {
-            "type": "Bus",
+            "type": "Автобус",
             "numer": "17",
             "count": 5,
             "startTime": 340,
@@ -11,7 +11,7 @@
             "endStop": 18
         },
         {
-            "type": "Bus",
+            "type": "Автобус",
             "numer": "18",
             "count": 2,
             "startTime": 340,
@@ -21,7 +21,7 @@
             "endStop": 18
         },
         {
-            "type": "Bus",
+            "type": "Автобус",
             "numer": "72",
             "count": 6,
             "startTime": 310,
@@ -31,7 +31,7 @@
             "endStop": 10
         },
         {
-            "type": "Trolleybus",
+            "type": "Тролейбус",
             "numer": "11",
             "count": 1,
             "startTime": 310,
@@ -41,7 +41,7 @@
             "endStop": 7
         },
         {
-            "type": "RouteTaxi",
+            "type": "Маршрутне таксі",
             "numer": "40",
             "count": 8,
             "startTime": 330,

@@ -1,19 +1,19 @@
-Zaporizhia_Square
-Glinka_Concert_Hall
-Metallurgists_Avenue
-Alexander_Polyak_Square
-Shevchenko_Boulevard
-Mira_Street
-Steelworkers_Street
-Shopping_Mall_Ukraine
-Festivalnaya_Square
-Gagarin_Street
-Pushkin_Square
-Regional_Library
-Zaporizhzhya_Sich_Newspaper_Editorial_Office
-University_Square
-Magara_Theater
-Bazarna_Street
-Bus_Station
-AvtoZAZ
-Railway_Station_Zaporozhye-1
+Площа Запорізька
+Концертний зал ім. Глінки
+Проспект Металургів
+Площа Олександра Поляка
+Бульвар Шевченка
+вул. Миру
+вул. Сталеварів
+ТЦ "Україна"
+Площа Фестивальна
+вул. Гагаріна
+Майдан Пушкіна
+Обласна бібліотека
+Редакція газети "Запорізька Січ"
+Майдан Університетський
+Театр ім. Магара
+вул. Базарна
+Автовокзал
+АвтоЗАЗ
+Залізничний вокзал "Запоріжжя-1"

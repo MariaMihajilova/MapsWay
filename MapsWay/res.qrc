@@ -10,7 +10,6 @@
         <file>css/style.css</file>
     </qresource>
     <qresource prefix="/data">
-        <file>logs/Error.txt</file>
         <file>data/json/routes.json</file>
         <file>data/csv/Alexander_Polyak_Square.csv</file>
         <file>data/csv/AvtoZAZ.csv</file>
