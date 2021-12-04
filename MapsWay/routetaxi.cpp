@@ -1,8 +1,6 @@
 #include "routetaxi.h"
 
 RouteTaxi::RouteTaxi(QWidget* parent, int pos, QPoint offset, float scale, bool left, int firstStop, int lastStop, int* stops) : TransportMarker(parent) {
-    connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(scaleChanged(float)));
-    connect(parent->parentWidget(), SIGNAL(offset(QPoint)), this, SLOT(offsetChanged(QPoint)));
     this->move(pos, offset, scale);
     this->setVisible(true);
     this->isLeftSide = left;
@@ -85,12 +83,4 @@ void RouteTaxi::Update(){
     else if(stopMin == QTime::currentTime().minute() && stopSec == QTime::currentTime().second()){
         isOnStop = false;
     }
-}
-
-void RouteTaxi::scaleChanged (float scale){
-    this->scale = scale;
-}
-
-void RouteTaxi::offsetChanged (QPoint offset){
-    this->offset = offset;
 }

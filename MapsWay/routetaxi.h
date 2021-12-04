@@ -16,8 +16,6 @@ public:
 
 private slots:
     void Update();
-    void scaleChanged (float scale);
-    void offsetChanged (QPoint offset);
 
 private :
     int pos;

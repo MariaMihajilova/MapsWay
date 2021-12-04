@@ -85,7 +85,6 @@ void Route::init(QWidget* parent){
             int pos = posInit(((globalTimeMinutes - routeInf.startTime) % routeInf.delay) - 1 + routeInf.delay * i,
                              globalTimeSeconds, &left);
             vehicleList[i] = new RouteTaxi(parent, pos, offset, scale, left, routeInf.firstStop, routeInf.endStop, stops);
-            //vehicleList[i]->setText("Bus"+QString::number(i));
             connect(timer, SIGNAL(timeout()), vehicleList[i], SLOT(Update()));
         }
     }

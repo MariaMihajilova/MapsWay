@@ -12,6 +12,7 @@ public:
 
 private slots:
     void on_scaleChanged(float scale);
+    void offsetChanged (QPoint offset);
     void init();
     void move(QPoint vec);
 

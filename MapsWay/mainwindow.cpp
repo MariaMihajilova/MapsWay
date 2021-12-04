@@ -46,22 +46,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_action_triggered()         // відкриття вікна Пошук маршруту
 {
-    //*//
-    //window = new RouteSearch(this->centralWidget(), scale, QPoint(ui->map->geometry().x(), ui->map->geometry().y()), showRoute);
     window->show();
 }
 
 
 void MainWindow::on_action_2_triggered()       // відкриття вікна Пошук зупинки
 {
-    //window2 = new BusStopSearch(this);
     window2->show();
 }
 
 
 void MainWindow::on_action_3_triggered()      // відкриття вікна Будування маршруту
 {
-    //window3 = new RouteConstruction(this);
     connect(window3, SIGNAL(visibleChanged(bool)), path, SLOT(visibleChanged(bool)));
     connect(window3, SIGNAL(newPath(int,int)), path, SLOT(newPath(int,int)));
     window3->show();
@@ -69,21 +65,18 @@ void MainWindow::on_action_3_triggered()      // відкриття вікна �
 
 void MainWindow::on_action_5_triggered()      // відкриття вікна з інструкцією
 {
-    //window6 = new Help(this);
     window6->show();
 }
 
 
 void MainWindow::on_action_6_triggered()     // відкриття вікна з інформацією про розробників
 {
-    //window5 = new About(this);
     window5->show();
 }
 
 
 void MainWindow::on_action_7_triggered()     // відкриття вікна Правила дорожнього руху
 {
-    //window4 = new TrafficRules(this);
     window4->show();
 }
 

@@ -3,6 +3,7 @@
 MarkerWidget::MarkerWidget(QWidget* parent) : QLabel(parent)
 {
     connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(on_scaleChanged(float)));
+    connect(parent->parentWidget(), SIGNAL(offset(QPoint)), this, SLOT(offsetChanged(QPoint)));
     connect(parent->parentWidget(), SIGNAL(moveSignal(QPoint)), this, SLOT(move(QPoint)));
     connect(parent->parentWidget(), SIGNAL(initialization()), this, SLOT(init()));
     scale = 1;
@@ -26,4 +27,8 @@ void MarkerWidget::move(QPoint vec){
 
 void MarkerWidget::init(){
     startPoint = QPoint(this->geometry().x(), this->geometry().y());
+}
+
+void MarkerWidget::offsetChanged (QPoint offset){
+    this->offset = offset;
 }
