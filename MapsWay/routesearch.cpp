@@ -10,6 +10,8 @@ RouteSearch::RouteSearch(QWidget *parent, float scale, QPoint offset, Route* rou
     connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(scaleChanged(float)));
     connect(parent->parentWidget(), SIGNAL(offset(QPoint)), this, SLOT(offsetChanged(QPoint)));
 
+    window5 = new RouteInformation(this);
+
     this->scale = scale;
     this->offset = offset;
     try {
@@ -85,7 +87,6 @@ void RouteSearch::on_pushButton_2_clicked()
         {
             throw (QString) "2";
         }
-        window5 = new RouteInformation(this);
         window5->show();
         window5->showInf(routes[index], stopNames);
     }

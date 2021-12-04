@@ -6,6 +6,9 @@ BusStopSearch::BusStopSearch(QWidget *parent) :
     ui(new Ui::BusStopSearch)
 {
     ui->setupUi(this);
+
+    window6 = new StopInformation(this);
+
     try {
         File file(":/data/data/txt/Stops_List.txt");
         stopPath = file.TxtRead();
@@ -36,7 +39,6 @@ BusStopSearch::~BusStopSearch()
 void BusStopSearch::on_pushButton_clicked()
 {
     try{
-        window6 = new StopInformation(this);
         window6->show();
         int index = ui->comboBox->currentIndex();
         if (index <= -1)
