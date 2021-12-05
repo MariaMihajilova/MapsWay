@@ -16,11 +16,11 @@ public:
     MapWidget(QWidget* parent = nullptr);
 
 private:
-    QRect startRect;
+    QRect startRect;                            // стартове положення карти
 
 private slots:
-    void on_scaleChanged(float scale);
-    void move(QPoint vec, QRect windowRect);
+    void on_scaleChanged(float scale);          // слот зміни маштабу карти
+    void move(QPoint vec, QRect windowRect);    // слот переміщення карти на заданий вектор
 };
 
 #endif // MAPWIDGET_H

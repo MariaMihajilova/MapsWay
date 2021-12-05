@@ -14,15 +14,15 @@ public:
     StopMarker(QWidget* parent);
 
 signals:
-    void clickSignal();
+    void clickSignal();                         // сигнал натискання на маркер
 
 private slots:
-    void infClosed();
+    void infClosed();                           // зпрацьовує коли вікно з інформацією закривається
 
 private:
-    void mousePressEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent* event);   // подія натискання кнопки мищі
 
-    bool isOpen;
+    bool isOpen;                                // чи відкрита інформація про зупинку
 };
 
 #endif // STOPMARKER_H

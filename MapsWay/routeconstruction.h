@@ -17,17 +17,17 @@ public:
     ~RouteConstruction();
 
 signals:
-    void visibleChanged(bool visible);
-    void newPath(int start, int end);
+    void visibleChanged(bool visible);      // перемикання відображення маршруту
+    void newPath(int start, int end);       // побудова нового маршруту
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_clicked();           // кнопка будування маршруту
 
 private:
     Ui::RouteConstruction *ui;
 
-    int* stopDist;
-    void closeEvent( QCloseEvent * e);
+    int* stopDist;                          // список позицій зупинок
+    void closeEvent( QCloseEvent * e);      // подія закриття вікна
 };
 
 #endif // ROUTECONSTRUCTION_H

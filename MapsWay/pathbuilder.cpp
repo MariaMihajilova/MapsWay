@@ -2,7 +2,7 @@
 
 PathBuilder::PathBuilder(QWidget *parent) : QWidget(parent)
 {
-    this->setGeometry(0,0,800,600);
+    // з'єднання сигналів зміни положення та маштабу
     connect(parent->parentWidget(), SIGNAL(scaleChanged(float)), this, SLOT(scaleChanged(float)));
     connect(parent->parentWidget(), SIGNAL(offset(QPoint)), this, SLOT(offsetChanged(QPoint)));
     scale = 1;
@@ -15,6 +15,7 @@ PathBuilder::PathBuilder(QWidget *parent) : QWidget(parent)
 void PathBuilder::paintEvent(QPaintEvent *event){
 
     Q_UNUSED(event);
+    // якщо шлях видимий малюємо його
     if (visible){
         QPainter* painter = new QPainter(this);
         BuildPath(painter, start, end);
@@ -22,10 +23,15 @@ void PathBuilder::paintEvent(QPaintEvent *event){
     }
 }
 
+// пошук координат в залежності від положення на проспекті
 QPoint PathBuilder::findCoords(int pos){
+    // початкові координати відрізку
     QPoint startPoint;
+    // вектор в напрямі кінця відрізку
     QPoint vec;
+    // довжина вектора
     float coef = 0;
+    // пошук віщєзазначених змінних в залежності від відрізку проспекту
     if (pos < 0){
         startPoint = QPoint(73, 12);
         vec = QPoint(509, 408);
@@ -68,10 +74,12 @@ QPoint PathBuilder::findCoords(int pos){
         coef = 1;
     }
 
+    // повернення координат потрібної точки проспекту
     vec *= coef;
     return startPoint + vec;
 }
 
+// пошук кінця відрізку проспекта
 int PathBuilder::PartEnd(int pos){
     if (pos <= 486){
         return 486;
@@ -93,11 +101,13 @@ int PathBuilder::PartEnd(int pos){
     return 0;
 }
 
+// будування маршруту
 void PathBuilder::BuildPath(QPainter* painter, int start, int end){
     QPen pen(Qt::blue, 5 * scale, Qt::SolidLine);
     painter->setPen(pen);
     QPoint startPoint;
 
+    // замальовуємо відрізки проспекту в проміжку від стартової позиції до останньої
     while (start < end){
         if (end <= PartEnd(start)){
             startPoint = findCoords(start);

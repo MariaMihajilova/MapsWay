@@ -26,11 +26,11 @@ public:
     ~MainWindow();
 
 signals:
-    void scaleChanged(float scale);                      // Сигнал зміни розміру інтерфейса
-    void moveSignal (QPoint vec, QRect windowRect);      // Сигнал зміни позиції інтерфейсу
-    void moveSignal (QPoint vec);                        // Сигнал зміни позиції інтерфейсу для міток
-    void initialization ();
-    void offset (QPoint offset);
+    void scaleChanged(float scale);                      // сигнал зміни розміру інтерфейса
+    void moveSignal (QPoint vec, QRect windowRect);      // сигнал зміни позиції інтерфейсу
+    void moveSignal (QPoint vec);                        // сигнал зміни позиції інтерфейсу для міток
+    void initialization ();                              // сигнал ініціфлізації деяких єлементів
+    void offset (QPoint offset);                         // сигнал оновлення данних про зміщення інтерфейсу
 
 private slots:
     void on_action_triggered();
@@ -56,8 +56,8 @@ private:
     About *window5;
     Help *window6;
 
-    Route* showRoute;
-    PathBuilder* path;
+    Route* showRoute;             // клас керування маршрутами
+    PathBuilder* path;            // клас будування та відображення маршруту
 
     QSlider* scaleBar;            // Повзунок зміни розміру
 
@@ -65,7 +65,6 @@ private:
 
     QRect rectBounds;             // Обмеження руху карти
     QPoint pointStart;            // Збереження позиції мищі при натисканні правої кнопки мищі
-    QPoint pointWheel;            // Збереження позиції мищі при змінненні позиції коліщчатка
 
     QRect rectMap;                // Збереження геометрії карти
 

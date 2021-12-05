@@ -15,23 +15,24 @@ public:
     RouteTaxi(QWidget* parent, int pos, QPoint offset, float scale, bool left, int firstStop, int lastStop, int* stpos);
 
 private slots:
-    void Update();
+    void Update();      // оновлення положення машини на карті
 
 private :
-    int pos;
-    bool isLeftSide;
+    int pos;            // позиція відносно початку проспекта
+    bool isLeftSide;    // сторона по якій рухається машина
+    // якщо відстань яку подолала машина не ціле число,
+    // дробна частина зберігається на наступне оновлення
     float reside;
-    int firstStop;
-    int lastStop;
-    int* stops;
+    int firstStop;      // номер першої зупинки
+    int lastStop;       // номер останньої зупинки
+    int* stops;         // список позиції зупинок
 
-    int time;
-    int prewStop;
-    int stopMin;
-    int stopSec;
-    bool isOnStop;
+    int prewStop;       // попередня відвідана машиною зупинка
+    int stopMin;        // хвилина в яку машина продовжить рух
+    int stopSec;        // секунда в яку машина продовжить рух
+    bool isOnStop;      // чи знаходиться машина зараз на зупинці
 
-    int findStop();
+    int findStop();     // пошук попередньої зупинки
 };
 
 #endif // ROUTETAXI_H

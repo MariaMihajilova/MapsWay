@@ -11,15 +11,15 @@ public:
     MarkerWidget(QWidget* parent = nullptr);
 
 private slots:
-    void on_scaleChanged(float scale);
-    void offsetChanged (QPoint offset);
-    void init();
-    void move(QPoint vec);
+    void on_scaleChanged(float scale);          // слот зміни положення маркеру в залежності від маштабу
+    void offsetChanged (QPoint offset);         // слот оновлення поточного зміщення інтерфейсу(потрібно для класів-нащадків)
+    void init();                                // слот ініціалізації стартового положення маркера
+    void move(QPoint vec);                      // слот зміни положення маркера на заданий вектор
 
 protected:
-    QPoint startPoint;
-    float scale;
-    QPoint offset;
+    QPoint startPoint;                          // стартове положення маркера
+    float scale;                                // поточний маштаб інтерфейсу
+    QPoint offset;                              // поточне зміщення інтерфейсу
 };
 
 #endif // MARKERWIDGET_H

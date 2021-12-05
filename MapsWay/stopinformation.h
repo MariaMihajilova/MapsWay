@@ -20,12 +20,12 @@ public:
     void showTable(QString fileName, QString stopName);       // виведення інформації на форму
 
 signals:
-    void closed();
+    void closed();                          // сигнал закриття форми
 
 private:
     Ui::StopInformation *ui;
 
-    void closeEvent ( QCloseEvent * e);
+    void closeEvent ( QCloseEvent * e);     // подія закриття форми
 
 
 };

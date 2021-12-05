@@ -17,29 +17,29 @@ public:
     Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* parent);
     ~Route();
 
-    static const int timerDelay = 1000;
-    static const int speed = 97;
+    static const int timerDelay = 1000;                     // затримка перед оновленням відображення маршрута
+    static const int speed = 97;                            // умовна швидкість машин
 
 private slots:
-    void scaleChanged (float scale);
-    void offsetChanged (QPoint offset);
+    void scaleChanged (float scale);                        // оновлення поточного маштабу інтерфейсу
+    void offsetChanged (QPoint offset);                     // оновлення поточного зміщення інтерфейсу
 
 private:
-    route routeInf;
-    int start;
-    int end;
-    RouteTaxi** vehicleList;
-    int* stops;
-    int stopCount;
+    route routeInf;                                         // інформація про маршрут
+    int start;                                              // номер першої зупинки
+    int end;                                                // номер останньої зупинки
+    RouteTaxi** vehicleList;                                // список покажчиків на машини маршркту
+    int* stops;                                             // список координат зупинок
+    int stopCount;                                          // кількість зупинок
 
-    QTimer* timer;
-    bool visible;
-    float scale;
-    QPoint offset;
+    QTimer* timer;                                          // таймер оновлення відображення маршрута
+    bool visible;                                           // чи відображається зараз маршрут
+    float scale;                                            // поточний маштаб інтерфейсу
+    QPoint offset;                                          // поточне зміщення інтерфейсу
 
 
-    void init(QWidget* parent);
-    int posInit(int timeMin, int timeSec, bool* left);
+    void init(QWidget* parent);                             // стартове розміщення транспорту
+    int posInit(int timeMin, int timeSec, bool* left);      // розрахунок стартової позиції машини
 
 
 };

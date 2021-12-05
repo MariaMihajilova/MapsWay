@@ -16,7 +16,7 @@ public:
     explicit RouteInformation(QWidget *parent = nullptr);
     ~RouteInformation();
 
-    void showInf(route inf, QList<QString> stopList);
+    void showInf(route inf, QList<QString> stopList);       // метод відображення інформації на формі
 
 private:
     Ui::RouteInformation *ui;

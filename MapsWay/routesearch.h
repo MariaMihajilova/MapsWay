@@ -19,26 +19,26 @@ public:
     ~RouteSearch();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_clicked();       // кнопка розміщення машин заданого маршруту на карті
 
-    void on_pushButton_2_clicked();
+    void on_pushButton_2_clicked();     // кнопка виведення інформації про маршрут
 
-    void scaleChanged(float scale);
-    void offsetChanged(QPoint offset);
+    void scaleChanged(float scale);     // оновлення поточного маштабу
+    void offsetChanged(QPoint offset);  // оновлення поточного зміщення
 
 private:
     Ui::RouteSearch *ui;
-    RouteInformation *window5;    // вікно iнформація про маршрут
+    RouteInformation *window5;          // вікно iнформація про маршрут
     QWidget* parent;
 
-    Route* routeCtrl;
+    Route* routeCtrl;                   // контроллер міток транспорту на карті
 
-    route* routes;
-    int* stopDist;
-    QList<QString> stopNames;
+    route* routes;                      // список інформації про всі маршрути
+    int* stopDist;                      // список позиції зупинок
+    QList<QString> stopNames;           // список назв зупинок
 
-    float scale;
-    QPoint offset;
+    float scale;                        // поточний маштаб інтерфейсу
+    QPoint offset;                      // поточне зміщення інтерфейсу
 };
 
 #endif // ROUTESEARCH_H

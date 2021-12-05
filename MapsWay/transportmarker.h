@@ -12,7 +12,7 @@ public:
     TransportMarker(QWidget* parent = nullptr);
 
 protected:
-    void move(int value, QPoint offset, float scale);
+    void move(int value, QPoint offset, float scale);   // розміщення маркера на карті
 };
 
 #endif // TRANSPORTMARKER_H
