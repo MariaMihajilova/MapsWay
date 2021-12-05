@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Інформація про програму</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/img/img/icon.ico</normaloff>:/img/img/icon.ico</iconset>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
