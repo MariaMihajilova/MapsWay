@@ -70,11 +70,17 @@
   <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>30</x>
      <y>100</y>
-     <width>181</width>
+     <width>351</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="currentText">
     <string/>
@@ -87,108 +93,114 @@
    </property>
    <item>
     <property name="text">
-     <string>1</string>
+     <string>Площа Запорізька</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>2</string>
+     <string>Концертний зал ім. Глінки</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>3</string>
+     <string>Проспект Металургів</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>4</string>
+     <string>Площа Олександра Поляка</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>5</string>
+     <string>Бульвар Шевченка</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>6</string>
+     <string>вул. Миру</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>7</string>
+     <string>вул. Сталеварів</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>8</string>
+     <string>ТЦ &quot;Україна&quot;</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>9</string>
+     <string>Площа Фестивальна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>10</string>
+     <string>вул. Гагаріна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>11</string>
+     <string>Майдан Пушкіна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>12</string>
+     <string>Обласна бібліотека</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>13</string>
+     <string>Редакція газети &quot;Запорізька Січ&quot;</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>14</string>
+     <string>Майдан Університетський</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>15</string>
+     <string>Театр ім. Магара</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>16</string>
+     <string>вул. Базарна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>17</string>
+     <string>Автовокзал</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>18</string>
+     <string>АвтоЗАЗ</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>19</string>
+     <string>Залізничний вокзал &quot;Запоріжжя-1&quot;</string>
     </property>
    </item>
   </widget>
   <widget class="QComboBox" name="comboBox_2">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>30</x>
      <y>240</y>
-     <width>181</width>
+     <width>351</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="currentIndex">
     <number>-1</number>
@@ -198,106 +210,106 @@
    </property>
    <item>
     <property name="text">
-     <string>1</string>
+     <string>Площа Запорізька</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>2</string>
+     <string>Концертний зал ім. Глінки</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>3</string>
+     <string>Проспект Металургів</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>4</string>
+     <string>Площа Олександра Поляка</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>5</string>
+     <string>Бульвар Шевченка</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>6</string>
+     <string>вул. Миру</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>7</string>
+     <string>вул. Сталеварів</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>8</string>
+     <string>ТЦ &quot;Україна&quot;</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>9</string>
+     <string>Площа Фестивальна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>10</string>
+     <string>вул. Гагаріна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>11</string>
+     <string>Майдан Пушкіна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>12</string>
+     <string>Обласна бібліотека</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>13</string>
+     <string>Редакція газети &quot;Запорізька Січ&quot;</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>14</string>
+     <string>Майдан Університетський</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>15</string>
+     <string>Театр ім. Магара</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>16</string>
+     <string>вул. Базарна</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>17</string>
+     <string>Автовокзал</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>18</string>
+     <string>АвтоЗАЗ</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>19</string>
+     <string>Залізничний вокзал &quot;Запоріжжя-1&quot;</string>
     </property>
    </item>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>310</y>
-     <width>331</width>
+     <width>351</width>
      <height>41</height>
     </rect>
    </property>

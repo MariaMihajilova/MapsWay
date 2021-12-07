@@ -2,10 +2,10 @@
 #define EXCEPTIONS_H
 
 // Клас для зберігання коду помилки та її повідомлення
-#include "QMap"
+#include <QMap>
 // Класи для оповіщення про помилки
-#include "QFile"
-#include "QMessageBox"
+#include <QFile>
+#include <QMessageBox>
 
 // Оголошення класу
 class Exception

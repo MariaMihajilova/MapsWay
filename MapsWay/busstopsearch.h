@@ -23,7 +23,7 @@ private slots:
 
 private:
     Ui::BusStopSearch *ui;
-    StopInformation *window6;       // вікно показу інформації про зупинку
+    StopInformation *window;       // вікно показу інформації про зупинку
 
     QList<QString> stopPath;       // масив імен файлів з розкладом
     QList<QString> stopName;

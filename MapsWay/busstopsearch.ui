@@ -70,9 +70,9 @@
   <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>20</x>
      <y>100</y>
-     <width>201</width>
+     <width>351</width>
      <height>31</height>
     </rect>
    </property>
@@ -90,22 +90,97 @@
    </property>
    <item>
     <property name="text">
-     <string>1</string>
+     <string>Площа Запорізька</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>2</string>
+     <string>Концертний зал ім. Глінки</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>3</string>
+     <string>Проспект Металургів</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>4</string>
+     <string>Площа Олександра Поляка</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Бульвар Шевченка</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Миру</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Сталеварів</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ТЦ &quot;Україна&quot;</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Площа Фестивальна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Гагаріна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Майдан Пушкіна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Обласна бібліотека</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Редакція газети &quot;Запорізька Січ&quot;</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Майдан Університетський</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Театр ім. Магара</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Базарна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Автовокзал</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>АвтоЗАЗ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Залізничний вокзал &quot;Запоріжжя-1&quot;</string>
     </property>
    </item>
   </widget>
