@@ -7,7 +7,7 @@ BusStopSearch::BusStopSearch(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    window = new StopInformation(this);
+    stopInfForm = new StopInformation(this);
 
     try {
         File file(":/data/data/txt/Stops_List.txt");
@@ -39,14 +39,14 @@ BusStopSearch::~BusStopSearch()
 void BusStopSearch::on_pushButton_clicked()
 {
     try{
-        window->show();
+        stopInfForm->show();
         int index = ui->comboBox->currentIndex();
         if (index <= -1)
         {
             throw (QString) "2";
         }
 
-        window->showTable(stopPath[index], stopName[index]);       // виведення інформації на форму
+        stopInfForm->showTable(stopPath[index], stopName[index]);       // виведення інформації на форму
     }
     catch(QString ErrorCode)
     {

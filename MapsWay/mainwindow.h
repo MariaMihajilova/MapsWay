@@ -49,12 +49,12 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    RouteSearch *window;          // вікно пошук маршруту
-    BusStopSearch *window2;       // вікно пошук зупинки
-    RouteConstruction *window3;   // вікно будування маршруту
-    TrafficRules *window4;        // вікно правила дорожнього руху
-    About *window5;
-    Help *window6;
+    RouteSearch *routeSearch;          // вікно пошук маршруту
+    BusStopSearch *stopSearch;       // вікно пошук зупинки
+    RouteConstruction *routeConst;   // вікно будування маршруту
+    TrafficRules *rules;        // вікно правила дорожнього руху
+    About *aboutForm;
+    Help *helpForm;
 
     Route* showRoute;             // клас керування маршрутами
     PathBuilder* path;            // клас будування та відображення маршруту

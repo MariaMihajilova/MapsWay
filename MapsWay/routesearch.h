@@ -28,7 +28,7 @@ private slots:
 
 private:
     Ui::RouteSearch *ui;
-    RouteInformation *window5;          // вікно iнформація про маршрут
+    RouteInformation *routeInfForm;          // вікно iнформація про маршрут
     QWidget* parent;
 
     Route* routeCtrl;                   // контроллер міток транспорту на карті

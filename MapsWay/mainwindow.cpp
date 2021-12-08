@@ -36,12 +36,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->map->lower();
 
     // ініціалізація вікон
-    window = new RouteSearch(this->centralWidget(), scale, QPoint(ui->map->geometry().x(), ui->map->geometry().y()), showRoute);
-    window2 = new BusStopSearch(this);
-    window3 = new RouteConstruction(this);
-    window4 = new TrafficRules(this);
-    window5 = new About(this);
-    window6 = new Help(this);
+    routeSearch = new RouteSearch(this->centralWidget(), scale, QPoint(ui->map->geometry().x(), ui->map->geometry().y()), showRoute);
+    stopSearch = new BusStopSearch(this);
+    routeConst = new RouteConstruction(this);
+    rules = new TrafficRules(this);
+    aboutForm = new About(this);
+    helpForm = new Help(this);
 
     // ініціалізація міток на карті
     emit initialization();
@@ -52,48 +52,48 @@ MainWindow::~MainWindow()
     delete ui;
     delete scaleBar;
     delete path;
-    delete window;
-    delete window2;
-    delete window3;
-    delete window4;
-    delete window5;
-    delete window6;
+    delete routeSearch;
+    delete stopSearch;
+    delete routeConst;
+    delete rules;
+    delete aboutForm;
+    delete helpForm;
 }
 
 void MainWindow::on_action_triggered()         // відкриття вікна Пошук маршруту
 {
-    window->show();
+    routeSearch->show();
 }
 
 
 void MainWindow::on_action_2_triggered()       // відкриття вікна Пошук зупинки
 {
-    window2->show();
+    stopSearch->show();
 }
 
 
 void MainWindow::on_action_3_triggered()      // відкриття вікна Будування маршруту
 {
-    connect(window3, SIGNAL(visibleChanged(bool)), path, SLOT(visibleChanged(bool)));
-    connect(window3, SIGNAL(newPath(int,int)), path, SLOT(newPath(int,int)));
-    window3->show();
+    connect(routeConst, SIGNAL(visibleChanged(bool)), path, SLOT(visibleChanged(bool)));
+    connect(routeConst, SIGNAL(newPath(int,int)), path, SLOT(newPath(int,int)));
+    routeConst->show();
 }
 
 void MainWindow::on_action_5_triggered()      // відкриття вікна з інструкцією
 {
-    window6->show();
+    helpForm->show();
 }
 
 
 void MainWindow::on_action_6_triggered()     // відкриття вікна з інформацією про розробників
 {
-    window5->show();
+    aboutForm->show();
 }
 
 
 void MainWindow::on_action_7_triggered()     // відкриття вікна Правила дорожнього руху
 {
-    window4->show();
+    rules->show();
 }
 
 void MainWindow::wheelEvent(QWheelEvent *event){
