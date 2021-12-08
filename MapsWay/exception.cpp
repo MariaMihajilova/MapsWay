@@ -5,7 +5,7 @@ Exception::Exception(QString key)
     // Завантажимо список помилок
     QMap<QString,QString> map;
     map["1"] = "Файл не знайдено";
-    map["2"] = "Некоректні ввідні дані";
+    map["2"] = "Некоректні введені дані";
     map["3"] = "Некоректні дані файлу";
     map["4"] = "Дані не завантажені";
     map["5"] = "Стиль не завантажено";
@@ -31,6 +31,6 @@ Exception::Exception(QString key)
         }
     }
     catch(QString ErrorCode) {                  // Повідомлення про помилку
-          messageBox.critical(0,"Error №" + ErrorCode,"Файл для запису помилок не знайдено!");
+          messageBox.critical(0,"Помилка №" + ErrorCode,"Файл для запису помилок не знайдено!");
     }
 }
