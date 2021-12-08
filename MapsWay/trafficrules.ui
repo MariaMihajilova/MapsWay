@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Правила дорожнього руху </string>
+   <string>Правила користування громадським транспортом </string>
   </property>
   <property name="windowIcon">
    <iconset resource="res.qrc">
