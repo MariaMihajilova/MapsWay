@@ -21,23 +21,24 @@ void MapWidget::on_scaleChanged(float scale){
 void MapWidget::move(QPoint vec, QRect windowRect){
     // переміщення карти на заданий вектор
     // перевірка на вихід за межі карти по горизонталі
-    if((vec.rx() + this->geometry().x() < 0) &&
-       (windowRect.width() < (this->geometry().width() + this->geometry().x() + vec.rx()))) {
-        this->setGeometry(vec.x() + this->geometry().x(),
+    int leftEdge = vec.x() + this->geometry().x();
+    int rightEdge = this->geometry().width() + this->geometry().x() + vec.x();
+    if((leftEdge < 0) &&
+       windowRect.width() < rightEdge) {
+        this->setGeometry(leftEdge,
                           this->geometry().y(),
                           this->geometry().width(),
                           this->geometry().height());
     }
     else {
     // якщо вектор виходить за межі встановлюємо максимально доступні координати
-        if (vec.rx() + this->geometry().x() > 0){
+        if (leftEdge > 0){
             this->setGeometry(0,
                               this->geometry().y(),
                               this->geometry().width(),
                               this->geometry().height());
 
-        }
-        if ((windowRect.width() >= (this->geometry().width() + this->geometry().x() + vec.rx()))){
+        } else if (windowRect.width() >= rightEdge){
             this->setGeometry(windowRect.width() - this->geometry().width(),
                               this->geometry().y(),
                               this->geometry().width(),
@@ -46,21 +47,23 @@ void MapWidget::move(QPoint vec, QRect windowRect){
         }
     }
     // перевірка на вихід за межі карти по вертикалі
-    if((vec.ry() + this->geometry().y() < 0) &&
-       (windowRect.height() < (this->geometry().height() + this->geometry().y() + vec.ry()))){
+    int topEdge = vec.y() + this->geometry().y();
+    int botEdge = this->geometry().height() + this->geometry().y() + vec.ry();
+    if(topEdge < 0 &&
+       windowRect.height() < botEdge){
         this->setGeometry(this->geometry().x(),
                           vec.y() + this->geometry().y(),
                           this->geometry().width(),
                           this->geometry().height());
     }
     else {
-        if (vec.ry() + this->geometry().y() >= 0){
+        if (topEdge >= 0){
             this->setGeometry(this->geometry().x(),
                               0,
                               this->geometry().width(),
                               this->geometry().height());
         }
-        if (windowRect.height() >= (this->geometry().height() + this->geometry().y() + vec.ry())){
+        if (windowRect.height() >= botEdge){
             this->setGeometry(this->geometry().x(),
                               windowRect.height() - this->geometry().height(),
                               this->geometry().width(),

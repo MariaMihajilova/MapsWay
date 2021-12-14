@@ -110,15 +110,14 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event){
     if (event->buttons() == Qt::RightButton){
-        QPoint temp(ui->map->geometry().x(), ui->map->geometry().y());
+        QPoint temp = ui->map->pos();
         // сигнал на переміщення карти
         emit moveSignal(event->pos() - pointStart, this->rectBounds);
-        temp = QPoint(ui->map->geometry().x() - temp.x(),
-                      ui->map->geometry().y()- temp.y());
+        temp = ui->map->pos() - temp;
         // сигнал на переміщення маркерів
         emit moveSignal(temp);
         // новлення даних про поточне зміщення інтерфейсу
-        emit offset( QPoint(ui->map->geometry().x(), ui->map->geometry().y()));
+        emit offset( ui->map->pos());
         pointStart = event->pos();
     }
 }
@@ -133,10 +132,8 @@ void MainWindow::scaleBar_valueChanged(int value)
     // переміщення області збільшення у центр вікна
     QPoint vec((tempSize.x() - ui->map->geometry().width()) / 2, (tempSize.y() - ui->map->geometry().height()) / 2);
     emit moveSignal(vec, this->rectBounds);
-    emit moveSignal(QPoint(ui->map->geometry().x(),
-                           ui->map->geometry().y()));
+    emit moveSignal(ui->map->pos());
     // оновлення даних про зміщення
-    emit offset( QPoint(ui->map->geometry().x(),
-                        ui->map->geometry().y()));
+    emit offset(ui->map->pos());
 
 }

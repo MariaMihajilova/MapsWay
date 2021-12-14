@@ -38,6 +38,6 @@ void MarkerWidget::init(){
 }
 
 // оновлення поточного зсуву
-void MarkerWidget::offsetChanged (QPoint offset){
+void MarkerWidget::offsetChanged(QPoint offset){
     this->offset = offset;
 }
