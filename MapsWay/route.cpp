@@ -18,7 +18,7 @@ Route::Route(route routeInf, float scale, QPoint offset, int* stops, QWidget* pa
     }
 
     timer = new QTimer;
-    timer->start(1000);
+    timer->start(timerDelay);
 
     this->init(parent);
 }
@@ -35,7 +35,7 @@ Route::~Route(){
 
 int Route::posInit(int timeMin, int timeSec, bool* left){
     int currStop = routeInf.firstStop;
-    int dist = timeMin * 97 + (float)97/60 * timeSec;
+    int dist = timeMin * speed + (float)speed/60 * timeSec;
     int pos = stops[currStop];
     bool temp = true;
 
@@ -46,7 +46,7 @@ int Route::posInit(int timeMin, int timeSec, bool* left){
             } else {
                 if (dist >= stops[currStop] - stops[currStop - 1]){
                     dist -= stops[currStop] - stops[currStop - 1];
-                    dist -= 97;
+                    dist -= speed;
                     currStop -= 1;
                     pos = stops[currStop];
                 } else {
@@ -61,7 +61,7 @@ int Route::posInit(int timeMin, int timeSec, bool* left){
             } else {
                 if (dist >= stops[currStop + 1] - stops[currStop] ){
                     dist -= stops[currStop + 1] - stops[currStop];
-                    dist -= 97;
+                    dist -= speed;
                     currStop += 1;
                     pos = stops[currStop];
                 } else {
