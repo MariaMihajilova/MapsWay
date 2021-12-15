@@ -1,0 +1,54 @@
+{
+    "routes": [
+        {
+            "type": "Автобус",
+            "numer": "17",
+            "count": 6,
+            "startTime": 340,
+            "endTime": 1380,
+            "delay": 10,
+            "firstStop": 0,
+            "endStop": 18
+        },
+        {
+            "type": "Автобус",
+            "numer": "18",
+            "count": 4,
+            "startTime": 340,
+            "endTime": 1380,
+            "delay": 15,
+            "firstStop": 0,
+            "endStop": 18
+        },
+        {
+            "type": "Автобус",
+            "numer": "72",
+            "count": 6,
+            "startTime": 310,
+            "endTime": 1380,
+            "delay": 10,
+            "firstStop": 0,
+            "endStop": 10
+        },
+        {
+            "type": "Тролейбус",
+            "numer": "11",
+            "count": 2,
+            "startTime": 310,
+            "endTime": 1380,
+            "delay": 30,
+            "firstStop": 0,
+            "endStop": 7
+        },
+        {
+            "type": "Маршрутне таксі",
+            "numer": "40",
+            "count": 8,
+            "startTime": 330,
+            "endTime": 1260,
+            "delay": 5,
+            "firstStop": 0,
+            "endStop": 16
+        }
+    ]
+}
