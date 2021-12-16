@@ -23,9 +23,9 @@ void StopInformation::showTable(QString fileName, QString stopName){
     QStandardItemModel* csvModel = new QStandardItemModel(this);
     csvModel->setColumnCount(5);
     csvModel->setHorizontalHeaderLabels(QStringList() << "Маршрут" << "Тип" << "Час початку" << "Час кінця" << "Інтервал");
-    ui->tableView->setModel(csvModel); // вставляємо модель в таблицю
+    ui->tableView->setModel(csvModel);  // вставляємо модель в таблицю
 
-    File file(fileName); // вказуємо шлях до файлу
+    File file(fileName);                // вказуємо шлях до файлу
     file.CsvRead(csvModel);
 
     ui->label_2->setText(stopName);

@@ -17,15 +17,15 @@ public:
     explicit StopInformation(QWidget *parent = nullptr);
     ~StopInformation();
 
-    void showTable(QString fileName, QString stopName);       // виведення інформації на форму
+    void showTable(QString fileName, QString stopName);         // виведення інформації на форму
 
 signals:
-    void closed();                          // сигнал закриття форми
+    void closed();                                              // сигнал закриття форми
 
 private:
     Ui::StopInformation *ui;
 
-    void closeEvent ( QCloseEvent * e);     // подія закриття форми
+    void closeEvent ( QCloseEvent * e);                         // подія закриття форми
 
 
 };

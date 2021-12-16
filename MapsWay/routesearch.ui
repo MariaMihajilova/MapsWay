@@ -95,7 +95,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="busShow">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -114,7 +114,7 @@
     <string>Знайти</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="BusInf">
    <property name="geometry">
     <rect>
      <x>20</x>

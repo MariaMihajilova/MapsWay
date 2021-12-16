@@ -6,24 +6,25 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
     try {
-        QFile styleF;
-        styleF.setFileName(":/design/css/style.css");
-        if(!styleF.open(QFile::ReadOnly))
+        QFile styleF;                                   // ініціалізація об'єкта класу QFile
+        styleF.setFileName(":/design/css/style.css");   // вибір шляху
+        if(!styleF.open(QFile::ReadOnly))               // відкриття для читання
         {
-            throw (QString) "5";
+            throw (QString) "5";                        // генерація помилки
         }
-        QString qssStr = styleF.readAll();
+        QString qssStr = styleF.readAll();              // запис змісту файлу
 
-        qApp->setStyleSheet(qssStr);
+        qApp->setStyleSheet(qssStr);                    // додає css код у таблицю стилів
     }
     catch(QString ErrorCode)
     {
-        Exception Errore (ErrorCode);
+        Exception Errore (ErrorCode);                   // вивід помилки
     }
+
+    MainWindow w;
+    w.show();
 
     return a.exec();
 }

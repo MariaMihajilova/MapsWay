@@ -60,38 +60,38 @@ MainWindow::~MainWindow()
     delete helpForm;
 }
 
-void MainWindow::on_action_triggered()         // відкриття вікна Пошук маршруту
+void MainWindow::on_routeSearch_show_triggered()    // відкриття вікна Пошук маршруту
 {
     routeSearch->show();
 }
 
 
-void MainWindow::on_action_2_triggered()       // відкриття вікна Пошук зупинки
+void MainWindow::on_stopSearch_show_triggered()     // відкриття вікна Пошук зупинки
 {
     stopSearch->show();
 }
 
 
-void MainWindow::on_action_3_triggered()      // відкриття вікна Будування маршруту
+void MainWindow::on_routeConst_show_triggered()     // відкриття вікна Будування маршруту
 {
     connect(routeConst, SIGNAL(visibleChanged(bool)), path, SLOT(visibleChanged(bool)));
     connect(routeConst, SIGNAL(newPath(int,int)), path, SLOT(newPath(int,int)));
     routeConst->show();
 }
 
-void MainWindow::on_action_5_triggered()      // відкриття вікна з інструкцією
+void MainWindow::on_helpForm_show_triggered()       // відкриття вікна з інструкцією
 {
     helpForm->show();
 }
 
 
-void MainWindow::on_action_6_triggered()     // відкриття вікна з інформацією про розробників
+void MainWindow::on_aboutForm_show_triggered()      // відкриття вікна з інформацією про розробників
 {
     aboutForm->show();
 }
 
 
-void MainWindow::on_action_7_triggered()     // відкриття вікна Правила дорожнього руху
+void MainWindow::on_rules_show_triggered()          // відкриття вікна Правила користування громадським транспортом
 {
     rules->show();
 }

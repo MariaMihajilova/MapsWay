@@ -17,8 +17,8 @@ BusStopSearch::BusStopSearch(QWidget *parent) :
             throw (QString) "4";
         }
 
-        file = File(":/data/data/txt/Stope_Name_List.txt");
-        stopName = file.TxtRead();
+        File file_2(":/data/data/txt/Stope_Name_List.txt");
+        stopName = file_2.TxtRead();
         if (stopName.empty())
         {
             throw (QString) "4";
@@ -36,16 +36,15 @@ BusStopSearch::~BusStopSearch()
     delete ui;
 }
 
-void BusStopSearch::on_pushButton_clicked()
+void BusStopSearch::on_stoInf_clicked()
 {
     try{
-        stopInfForm->show();
         int index = ui->comboBox->currentIndex();
         if (index <= -1)
         {
             throw (QString) "2";
         }
-
+        stopInfForm->show();
         stopInfForm->showTable(stopPath[index], stopName[index]);       // виведення інформації на форму
     }
     catch(QString ErrorCode)

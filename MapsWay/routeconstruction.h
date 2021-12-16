@@ -21,7 +21,7 @@ signals:
     void newPath(int start, int end);       // побудова нового маршруту
 
 private slots:
-    void on_pushButton_clicked();           // кнопка будування маршруту
+    void on_routeConst_clicked();           // кнопка будування маршруту
 
 private:
     Ui::RouteConstruction *ui;

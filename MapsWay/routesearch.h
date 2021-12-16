@@ -19,16 +19,16 @@ public:
     ~RouteSearch();
 
 private slots:
-    void on_pushButton_clicked();       // кнопка розміщення машин заданого маршруту на карті
+    void on_busShow_clicked();          // кнопка розміщення машин заданого маршруту на карті
 
-    void on_pushButton_2_clicked();     // кнопка виведення інформації про маршрут
+    void on_BusInf_clicked();           // кнопка виведення інформації про маршрут
 
     void scaleChanged(float scale);     // оновлення поточного маштабу
     void offsetChanged(QPoint offset);  // оновлення поточного зміщення
 
 private:
     Ui::RouteSearch *ui;
-    RouteInformation *routeInfForm;          // вікно iнформація про маршрут
+    RouteInformation *routeInfForm;     // вікно iнформація про маршрут
     QWidget* parent;
 
     Route* routeCtrl;                   // контроллер міток транспорту на карті

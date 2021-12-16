@@ -478,58 +478,58 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
      <string>Меню</string>
     </property>
-    <addaction name="action"/>
-    <addaction name="action_2"/>
-    <addaction name="action_3"/>
+    <addaction name="routeSearch_show"/>
+    <addaction name="stopSearch_show"/>
+    <addaction name="routeConst_show"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
      <string>Допомога користувачу</string>
     </property>
-    <addaction name="action_5"/>
-    <addaction name="action_6"/>
-    <addaction name="action_7"/>
+    <addaction name="helpForm_show"/>
+    <addaction name="aboutForm_show"/>
+    <addaction name="rules_show"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action">
+  <action name="routeSearch_show">
    <property name="text">
     <string>Пошук маршруту
 </string>
    </property>
   </action>
-  <action name="action_2">
+  <action name="stopSearch_show">
    <property name="text">
     <string>Пошук зупинки
 </string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="routeConst_show">
    <property name="text">
     <string>Будування маршруту
 </string>
    </property>
   </action>
-  <action name="action_5">
+  <action name="helpForm_show">
    <property name="text">
     <string>Інструкція до користування</string>
    </property>
   </action>
-  <action name="action_6">
+  <action name="aboutForm_show">
    <property name="text">
     <string>Про програму</string>
    </property>
   </action>
-  <action name="action_7">
+  <action name="rules_show">
    <property name="text">
     <string>Правила користування громадським транспортом</string>
    </property>

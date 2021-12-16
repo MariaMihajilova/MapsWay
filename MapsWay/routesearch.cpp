@@ -58,7 +58,7 @@ RouteSearch::~RouteSearch()
     delete ui;
 }
 
-void RouteSearch::on_pushButton_clicked()       //відкриття вікна Інформація про маршрут
+void RouteSearch::on_busShow_clicked()       // відкриття вікна Інформація про маршрут
 {
     try {
         int index = ui->comboBox->currentIndex();
@@ -79,20 +79,20 @@ void RouteSearch::on_pushButton_clicked()       //відкриття вікна 
 }
 
 
-void RouteSearch::on_pushButton_2_clicked()
+void RouteSearch::on_BusInf_clicked()                     // відкриття вікна «Інформація про маршрут»
 {
     try {
-        int index = ui->comboBox->currentIndex();
-        if (index <= -1)
+        int index = ui->comboBox->currentIndex();         // зчитуємо індекс
+        if (index <= -1)                                  // якщо індекс від'ємний (не обран номер маршруту)
         {
-            throw (QString) "2";
+            throw (QString) "2";                          // генерація помилки
         }
-        routeInfForm->show();
-        routeInfForm->showInf(routes[index], stopNames);
+        routeInfForm->show();                             // відкриття вікна
+        routeInfForm->showInf(routes[index], stopNames);  // оновлення інформації на вікні
     }
     catch(QString ErrorCode)
     {
-        Exception Errore (ErrorCode);
+        Exception Errore (ErrorCode);                     // виведення помилки
     }
 }
 

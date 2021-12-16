@@ -37,7 +37,7 @@ void RouteConstruction::closeEvent ( QCloseEvent * e){
     emit visibleChanged(false);
 }
 
-void RouteConstruction::on_pushButton_clicked()      // функція побудови маршруту
+void RouteConstruction::on_routeConst_clicked()      // функція побудови маршруту
 {
     try {
         int start = ui->comboBox->currentIndex();

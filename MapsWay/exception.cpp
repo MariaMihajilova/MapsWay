@@ -17,7 +17,7 @@ Exception::Exception(QString key)
 
     // Графічне повідомлення користувача про помилку
     QMessageBox messageBox;
-    messageBox.critical(0,"Error №" + key, value +" !");
+    messageBox.critical(0,"Помилка №" + key, value +" !");
 
     // Запис повідомлення до звіту про помилки
     QFile file("logs/Error_Logs.txt");
