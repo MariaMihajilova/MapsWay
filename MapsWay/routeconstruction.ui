@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RouteConstruction</class>
+ <widget class="QDialog" name="RouteConstruction">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>423</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>423</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Будування маршруту </string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/img/img/icon.ico</normaloff>:/img/img/icon.ico</iconset>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>50</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Точка відправки</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>180</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Точка прибуття</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>351</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+   <property name="currentIndex">
+    <number>-1</number>
+   </property>
+   <property name="maxVisibleItems">
+    <number>5</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>Площа Запорізька</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Концертний зал ім. Глінки</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Проспект Металургів</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Площа Олександра Поляка</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Бульвар Шевченка</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Миру</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Сталеварів</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ТЦ &quot;Україна&quot;</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Площа Фестивальна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Гагаріна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Майдан Пушкіна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Обласна бібліотека</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Редакція газети &quot;Запорізька Січ&quot;</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Майдан Університетський</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Театр ім. Магара</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Базарна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Автовокзал</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>АвтоЗАЗ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Залізничний вокзал &quot;Запоріжжя-1&quot;</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>240</y>
+     <width>351</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="currentIndex">
+    <number>-1</number>
+   </property>
+   <property name="maxVisibleItems">
+    <number>5</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>Площа Запорізька</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Концертний зал ім. Глінки</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Проспект Металургів</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Площа Олександра Поляка</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Бульвар Шевченка</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Миру</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Сталеварів</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ТЦ &quot;Україна&quot;</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Площа Фестивальна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Гагаріна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Майдан Пушкіна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Обласна бібліотека</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Редакція газети &quot;Запорізька Січ&quot;</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Майдан Університетський</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Театр ім. Магара</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>вул. Базарна</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Автовокзал</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>АвтоЗАЗ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Залізничний вокзал &quot;Запоріжжя-1&quot;</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="routeConst">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Побудувати</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
